@@ -11,7 +11,6 @@
 
 
 using std::map;
-using std::pair;
 using std::vector;
 
 // glm/glm.hpp
