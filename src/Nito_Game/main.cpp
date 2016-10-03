@@ -10,7 +10,7 @@ using Nito::add_update_handler;
 using Nito::run_engine;
 
 // Nito/ECS.hpp
-using Nito::add_system_subscribe_handler;
+using Nito::set_system_subscribe_handler;
 
 // Nito_Game/Systems/Controller.hpp
 using Nito_Game::controller_subscribe;
@@ -22,7 +22,7 @@ int main()
 {
     // Setup custom systems.
     controller_init(get_window());
-    add_system_subscribe_handler("controller", controller_subscribe);
+    set_system_subscribe_handler("controller", controller_subscribe);
     add_update_handler(controller_update);
 
 
