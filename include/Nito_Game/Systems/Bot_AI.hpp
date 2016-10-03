@@ -4,9 +4,6 @@
 #include "Nito/ECS.hpp"
 
 
-struct GLFWwindow;
-
-
 namespace Nito_Game
 {
 
@@ -16,9 +13,8 @@ namespace Nito_Game
 // Interface
 //
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-void controller_subscribe(const Nito::Entity entity);
-void controller_update(const float delta_time);
-void controller_init(GLFWwindow ** _window);
+void bot_ai_subscribe(const Nito::Entity entity);
+void bot_ai_update(const float delta_time);
 
 
 } // namespace Nito_Game

@@ -14,5 +14,13 @@
         [
             "transform"
         ]
+    },
+
+    "bot_ai":
+    {
+        "required_components":
+        [
+            "transform"
+        ]
     }
 }

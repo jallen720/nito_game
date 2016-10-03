@@ -28,7 +28,29 @@
                 "type": "transform",
                 "config":
                 {
-                    "position": { "x": 3, "y": 3 },
+                    "position": { "x": 1.5, "y": 0.5 },
+                    "scale": { "x": 1, "y": 1 }
+                }
+            },
+            {
+                "type": "sprite",
+                "config":
+                {
+                    "texture_path": "resources/textures/character.png",
+                    "shader_pipeline_name": "dev"
+                }
+            }
+        ],
+        "systems": [ "renderer", "bot_ai" ]
+    },
+    {
+        "components":
+        [
+            {
+                "type": "transform",
+                "config":
+                {
+                    "position": { "x": 5, "y": 5 },
                     "scale": { "x": 0.5, "y": 0.5 }
                 }
             },
