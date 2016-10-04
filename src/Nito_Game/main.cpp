@@ -4,6 +4,7 @@
 #include "Nito/Engine.hpp"
 #include "Nito/ECS.hpp"
 #include "Cpp_Utils/Container.hpp"
+#include "Cpp_Utils/JSON.hpp"
 
 #include "Nito_Game/Systems/Controller.hpp"
 #include "Nito_Game/Systems/Bot_AI.hpp"
@@ -22,11 +23,15 @@ using Nito::Update_Handler;
 // Nito/ECS.hpp
 using Nito::set_component_handler;
 using Nito::set_system_subscribe_handler;
+using Nito::Component;
 using Nito::Component_Handler;
 using Nito::System_Subscribe_Handler;
 
 // Cpp_Utils/Container.hpp
 using Cpp_Utils::for_each;
+
+// Cpp_Utils/JSON.hpp
+using Cpp_Utils::JSON;
 
 
 namespace Nito_Game
@@ -54,7 +59,13 @@ static map<string, const System_Subscribe_Handler> system_subscribe_handlers
 
 static map<string, const Component_Handler> component_handlers
 {
-
+    {
+        "target",
+        [](const JSON & component_data) -> Component
+        {
+            return new string(component_data.get<string>());
+        }
+    },
 };
 
 

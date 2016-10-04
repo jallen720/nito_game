@@ -20,7 +20,8 @@
     {
         "required_components":
         [
-            "transform"
+            "transform",
+            "target"
         ]
     }
 }
