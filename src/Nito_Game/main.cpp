@@ -3,6 +3,7 @@
 #include <map>
 #include "Nito/Engine.hpp"
 #include "Nito/ECS.hpp"
+#include "Nito/Utilities.hpp"
 #include "Cpp_Utils/Container.hpp"
 #include "Cpp_Utils/JSON.hpp"
 
@@ -26,6 +27,9 @@ using Nito::set_system_subscribe_handler;
 using Nito::Component;
 using Nito::Component_Handler;
 using Nito::System_Subscribe_Handler;
+
+// Nito/Utilities.hpp
+using Nito::string_component_handler;
 
 // Cpp_Utils/Container.hpp
 using Cpp_Utils::for_each;
@@ -61,10 +65,7 @@ static map<string, const Component_Handler> component_handlers
 {
     {
         "target",
-        [](const JSON & component_data) -> Component
-        {
-            return new string(component_data.get<string>());
-        }
+        string_component_handler
     },
 };
 
