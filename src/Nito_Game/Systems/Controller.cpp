@@ -37,6 +37,7 @@ namespace Nito_Game
 //
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 static vector<Transform *> entity_transforms;
+static vector<float *> entity_speeds;
 static GLFWwindow ** window;
 
 
@@ -48,6 +49,7 @@ static GLFWwindow ** window;
 void controller_subscribe(const Entity entity)
 {
     entity_transforms.push_back((Transform *)get_component(entity, "transform"));
+    entity_speeds.push_back((float *)get_component(entity, "speed"));
 }
 
 
@@ -61,7 +63,7 @@ void controller_update(const float delta_time)
         { GLFW_KEY_A, vec3(-1.0f, 0.0f, 0.0f) },
     };
 
-    for (Transform * entity_transform : entity_transforms)
+    for (auto i = 0u; i < entity_transforms.size(); i++)
     {
         for_each(key_directions, [&](const int key, const vec3 & direction) -> void
         {
@@ -69,7 +71,7 @@ void controller_update(const float delta_time)
 
             if (key_state == GLFW_PRESS || key_state == GLFW_REPEAT)
             {
-                entity_transform->position += direction * delta_time;
+                entity_transforms[i]->position += direction * delta_time * *entity_speeds[i];
             }
         });
     }

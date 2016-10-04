@@ -12,7 +12,8 @@
     {
         "required_components":
         [
-            "transform"
+            "transform",
+            "speed"
         ]
     },
 
@@ -21,7 +22,8 @@
         "required_components":
         [
             "transform",
-            "target"
+            "target",
+            "speed"
         ]
     }
 }

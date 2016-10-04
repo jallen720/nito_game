@@ -30,6 +30,7 @@ using Nito::System_Subscribe_Handler;
 
 // Nito/Utilities.hpp
 using Nito::string_component_handler;
+using Nito::float_component_handler;
 
 // Cpp_Utils/Container.hpp
 using Cpp_Utils::for_each;
@@ -67,6 +68,10 @@ static map<string, const Component_Handler> component_handlers
         "target",
         string_component_handler
     },
+    {
+        "speed",
+        float_component_handler
+    }
 };
 
 

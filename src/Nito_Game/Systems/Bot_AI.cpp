@@ -33,6 +33,7 @@ namespace Nito_Game
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 static vector<Transform *> entity_transforms;
 static vector<Transform *> entity_target_transforms;
+static vector<float *> entity_speeds;
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -45,6 +46,7 @@ void bot_ai_subscribe(const Entity entity)
     auto target = (string *)get_component(entity, "target");
     entity_transforms.push_back((Transform *)get_component(entity, "transform"));
     entity_target_transforms.push_back((Transform *)get_component(get_entity(*target), "transform"));
+    entity_speeds.push_back((float *)get_component(entity, "speed"));
 }
 
 
@@ -54,7 +56,7 @@ void bot_ai_update(const float delta_time)
     {
         Transform * entity_transform = entity_transforms[i];
         vec3 direction = normalize(entity_target_transforms[i]->position - entity_transform->position);
-        entity_transform->position += direction * delta_time / 2.0f;
+        entity_transform->position += direction * delta_time * *entity_speeds[i];
     }
 }
 

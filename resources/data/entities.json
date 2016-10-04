@@ -21,6 +21,10 @@
                     "texture_path": "resources/textures/character.png",
                     "shader_pipeline_name": "dev"
                 }
+            },
+            {
+                "type": "speed",
+                "data": 1
             }
         ],
         "systems": [ "renderer", "controller" ]
@@ -51,6 +55,10 @@
             {
                 "type": "target",
                 "data": "Player"
+            },
+            {
+                "type": "speed",
+                "data": 0.5
             }
         ],
         "systems": [ "renderer", "bot_ai" ]
@@ -77,6 +85,10 @@
             {
                 "type": "target",
                 "data": "bot_0"
+            },
+            {
+                "type": "speed",
+                "data": 0.25
             }
         ],
         "systems": [ "renderer", "bot_ai" ]
