@@ -1,0 +1,20 @@
+{
+    "renderer":
+    [
+        "sprite",
+        "transform"
+    ],
+
+    "controller":
+    [
+        "transform",
+        "speed"
+    ],
+
+    "bot_ai":
+    [
+        "transform",
+        "target",
+        "speed"
+    ]
+}
