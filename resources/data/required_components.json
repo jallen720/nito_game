@@ -4,13 +4,11 @@
         "sprite",
         "transform"
     ],
-
     "controller":
     [
         "transform",
         "speed"
     ],
-
     "bot_ai":
     [
         "transform",
