@@ -2,6 +2,11 @@
     "z_near": -100,
     "z_far": 100,
     "pixels_per_unit": 64,
+    "depth_testing_is_enabled": false,
+    "clear_flags":
+    [
+        "color_buffer_bit"
+    ],
     "clear_color":
     {
         "red": 1.0,
