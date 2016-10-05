@@ -12,7 +12,7 @@
     "blending":
     {
         "is_enabled": true,
-        "s_factor": "source_alpha",
-        "d_factor": "one_minus_source_alpha"
+        "source_factor": "source_alpha",
+        "destination_factor": "one_minus_source_alpha"
     }
 }
