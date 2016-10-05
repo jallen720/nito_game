@@ -19,7 +19,7 @@
                 "data":
                 {
                     "texture_path": "resources/textures/character.png",
-                    "shader_pipeline_name": "dev"
+                    "shader_pipeline_name": "texture"
                 }
             },
             {
@@ -53,7 +53,7 @@
                 "data":
                 {
                     "texture_path": "resources/textures/character.png",
-                    "shader_pipeline_name": "dev"
+                    "shader_pipeline_name": "texture"
                 }
             },
             {
@@ -87,7 +87,7 @@
                 "data":
                 {
                     "texture_path": "resources/textures/character.png",
-                    "shader_pipeline_name": "dev"
+                    "shader_pipeline_name": "texture"
                 }
             },
             {
@@ -121,7 +121,7 @@
                 "data":
                 {
                     "texture_path": "resources/textures/polys.jpg",
-                    "shader_pipeline_name": "dev"
+                    "shader_pipeline_name": "texture"
                 }
             }
         ],

@@ -14,30 +14,16 @@
         ]
     },
     {
-        "name": "simple",
+        "name": "texture",
         "shaders":
         [
             {
                 "type": "vertex",
-                "source_path": "simple"
+                "source_path": "default"
             },
             {
                 "type": "fragment",
-                "source_path": "simple"
-            }
-        ]
-    },
-    {
-        "name": "colorful",
-        "shaders":
-        [
-            {
-                "type": "vertex",
-                "source_path": "colorful"
-            },
-            {
-                "type": "fragment",
-                "source_path": "colorful"
+                "source_path": "texture"
             }
         ]
     }
