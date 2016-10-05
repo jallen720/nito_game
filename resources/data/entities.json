@@ -27,7 +27,11 @@
                 "data": 1
             }
         ],
-        "systems": [ "renderer", "controller" ]
+        "systems":
+        [
+            "renderer",
+            "controller",
+        ]
     },
     {
         "components":
@@ -61,7 +65,11 @@
                 "data": 0.5
             }
         ],
-        "systems": [ "renderer", "bot_ai" ]
+        "systems":
+        [
+            "renderer",
+            "bot_ai",
+        ]
     },
     {
         "components":
@@ -91,7 +99,11 @@
                 "data": 0.25
             }
         ],
-        "systems": [ "renderer", "bot_ai" ]
+        "systems":
+        [
+            "renderer",
+            "bot_ai",
+        ]
     },
     {
         "components":
@@ -113,6 +125,9 @@
                 }
             }
         ],
-        "systems": [ "renderer" ]
+        "systems":
+        [
+            "renderer",
+        ]
     }
 ]
