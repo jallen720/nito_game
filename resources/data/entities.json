@@ -31,6 +31,7 @@
         [
             "renderer",
             "controller",
+            "vertical_depth_modifier"
         ]
     },
     {
@@ -69,6 +70,7 @@
         [
             "renderer",
             "bot_ai",
+            "vertical_depth_modifier"
         ]
     },
     {
@@ -103,6 +105,7 @@
         [
             "renderer",
             "bot_ai",
+            "vertical_depth_modifier"
         ]
     },
     {
@@ -128,6 +131,7 @@
         "systems":
         [
             "renderer",
+            "vertical_depth_modifier"
         ]
     }
 ]

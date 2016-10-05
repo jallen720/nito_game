@@ -14,5 +14,9 @@
         "transform",
         "target",
         "speed"
+    ],
+    "vertical_depth_modifier":
+    [
+        "transform"
     ]
 }
