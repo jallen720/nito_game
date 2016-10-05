@@ -11,6 +11,17 @@
         }
     },
     {
+        "path": "test.png",
+        "format": "rgba",
+        "options":
+        {
+            "wrap_s": "repeat",
+            "wrap_t": "repeat",
+            "min_filter": "nearest",
+            "mag_filter": "nearest"
+        }
+    },
+    {
         "path": "box.jpg",
         "format": "rgb",
         "options":

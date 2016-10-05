@@ -53,7 +53,7 @@
                 "type": "sprite",
                 "data":
                 {
-                    "texture_path": "resources/textures/character.png",
+                    "texture_path": "resources/textures/test.png",
                     "shader_pipeline_name": "texture"
                 }
             },
@@ -88,7 +88,7 @@
                 "type": "sprite",
                 "data":
                 {
-                    "texture_path": "resources/textures/character.png",
+                    "texture_path": "resources/textures/test.png",
                     "shader_pipeline_name": "texture"
                 }
             },
