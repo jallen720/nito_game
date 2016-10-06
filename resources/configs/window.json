@@ -3,9 +3,10 @@
     "width": 1280,
     "height": 720,
     "refresh_rate": "every_update",
-    "glfw_context_version":
+    "hints":
     {
-        "major": 2,
-        "minor": 0
+        "context_version_major": 2,
+        "context_version_minor": 1,
+        "resizable": 0
     }
 }
