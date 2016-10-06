@@ -12,6 +12,7 @@ using std::string;
 // glm/glm.hpp
 using glm::vec3;
 using glm::normalize;
+using glm::distance;
 
 // Nito/ECS.hpp
 using Nito::Entity;
@@ -54,9 +55,16 @@ void bot_ai_update(const float delta_time)
 {
     for (auto i = 0u; i < entity_transforms.size(); i++)
     {
-        Transform * entity_transform = entity_transforms[i];
-        vec3 direction = normalize(entity_target_transforms[i]->position - entity_transform->position);
-        entity_transform->position += direction * delta_time * *entity_speeds[i];
+        Transform * transform = entity_transforms[i];
+        Transform * target_transform = entity_target_transforms[i];
+        float movement_value = delta_time * *entity_speeds[i];
+
+
+        // Don't move entity if the movement value will cause it to move past its target, preventing "jittering".
+        if (distance(transform->position, target_transform->position) >= movement_value)
+        {
+            transform->position += normalize(target_transform->position - transform->position) * movement_value;
+        }
     }
 }
 
