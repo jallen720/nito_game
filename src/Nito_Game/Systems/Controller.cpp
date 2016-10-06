@@ -15,6 +15,7 @@ using std::vector;
 
 // glm/glm.hpp
 using glm::vec3;
+using glm::normalize;
 
 // Cpp_Utils/Container.hpp
 using Cpp_Utils::for_each;
@@ -63,6 +64,12 @@ void controller_update(const float delta_time)
         { GLFW_KEY_A, vec3(-1.0f, 0.0f, 0.0f) },
     };
 
+
+    // Get speed modifier based on whether the left shift key is down.
+    int shift_key_state = glfwGetKey(*window, GLFW_KEY_LEFT_SHIFT);
+    float speed_modifier = (shift_key_state == GLFW_PRESS || shift_key_state == GLFW_REPEAT) ? 2.0f : 1.0f;
+
+
     for (auto i = 0u; i < entity_transforms.size(); i++)
     {
         for_each(key_directions, [&](const int key, const vec3 & direction) -> void
@@ -71,7 +78,11 @@ void controller_update(const float delta_time)
 
             if (key_state == GLFW_PRESS || key_state == GLFW_REPEAT)
             {
-                entity_transforms[i]->position += direction * delta_time * *entity_speeds[i];
+                entity_transforms[i]->position +=
+                    normalize(direction) *
+                    delta_time *
+                    *entity_speeds[i] *
+                    speed_modifier;
             }
         });
     }
