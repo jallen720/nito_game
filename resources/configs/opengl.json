@@ -3,6 +3,7 @@
     "z_far": 100,
     "pixels_per_unit": 64,
     "depth_testing_is_enabled": false,
+    "scissor_testing_is_enabled": true,
     "clear_flags":
     [
         "color_buffer_bit"
