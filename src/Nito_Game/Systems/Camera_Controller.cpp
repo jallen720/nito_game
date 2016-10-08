@@ -43,7 +43,7 @@ void camera_controller_subscribe(const Entity entity)
 }
 
 
-void camera_controller_update(const float delta_time)
+void camera_controller_update(const float /*delta_time*/)
 {
     for (auto i = 0u; i < entity_transforms.size(); i++)
     {

@@ -14,7 +14,7 @@ namespace Nito_Game
 //
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void camera_controller_subscribe(const Nito::Entity entity);
-void camera_controller_update(const float delta_time);
+void camera_controller_update(const float /*delta_time*/);
 
 
 } // namespace Nito
