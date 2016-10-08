@@ -20,10 +20,6 @@
         "target",
         "speed"
     ],
-    "vertical_depth_modifier":
-    [
-        "transform"
-    ],
     "camera_controller":
     [
         "transform",
