@@ -10,6 +10,7 @@
 #include "Nito_Game/Systems/Controller.hpp"
 #include "Nito_Game/Systems/Bot_AI.hpp"
 #include "Nito_Game/Systems/Vertical_Depth_Modifier.hpp"
+#include "Nito_Game/Systems/Camera_Controller.hpp"
 
 
 using std::string;
@@ -54,6 +55,7 @@ static vector<Update_Handler> update_handlers
     controller_update,
     bot_ai_update,
     vertical_depth_modifier_update,
+    camera_controller_update,
 };
 
 
@@ -62,6 +64,7 @@ static map<string, const System_Subscribe_Handler> system_subscribe_handlers
     { "controller"              , controller_subscribe              },
     { "bot_ai"                  , bot_ai_subscribe                  },
     { "vertical_depth_modifier" , vertical_depth_modifier_subscribe },
+    { "camera_controller"       , camera_controller_subscribe       },
 };
 
 

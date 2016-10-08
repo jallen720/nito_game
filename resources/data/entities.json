@@ -77,6 +77,10 @@
         "components":
         [
             {
+                "type": "id",
+                "data": "bot_1"
+            },
+            {
                 "type": "transform",
                 "data":
                 {
@@ -132,6 +136,103 @@
         [
             "renderer",
             "vertical_depth_modifier"
+        ]
+    },
+    {
+        "components":
+        [
+            {
+                "type": "transform",
+                "data":
+                {
+                    "position": { "x": 0, "y": 0 },
+                    "scale": { "x": 1, "y": 1 }
+                }
+            },
+            {
+                "type": "viewport",
+                "data":
+                {
+                    "x": 520,
+                    "y": 40,
+                    "width": 720,
+                    "height": 640,
+                    "z_near": -100,
+                    "z_far": 100
+                }
+            }
+        ],
+        "systems":
+        [
+            "camera"
+        ]
+    },
+    {
+        "components":
+        [
+            {
+                "type": "transform",
+                "data":
+                {
+                    "position": { "x": 0, "y": 0 },
+                    "scale": { "x": 1, "y": 1 }
+                }
+            },
+            {
+                "type": "viewport",
+                "data":
+                {
+                    "x": 40,
+                    "y": 40,
+                    "width": 440,
+                    "height": 300,
+                    "z_near": -100,
+                    "z_far": 100
+                }
+            },
+            {
+                "type": "target",
+                "data": "Player"
+            }
+        ],
+        "systems":
+        [
+            "camera",
+            "camera_controller"
+        ]
+    },
+    {
+        "components":
+        [
+            {
+                "type": "transform",
+                "data":
+                {
+                    "position": { "x": 0, "y": 0 },
+                    "scale": { "x": 1, "y": 1 }
+                }
+            },
+            {
+                "type": "viewport",
+                "data":
+                {
+                    "x": 40,
+                    "y": 380,
+                    "width": 440,
+                    "height": 300,
+                    "z_near": -100,
+                    "z_far": 100
+                }
+            },
+            {
+                "type": "target",
+                "data": "bot_1"
+            }
+        ],
+        "systems":
+        [
+            "camera",
+            "camera_controller"
         ]
     }
 ]

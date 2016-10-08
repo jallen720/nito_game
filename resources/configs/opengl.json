@@ -1,6 +1,4 @@
 {
-    "z_near": -100,
-    "z_far": 100,
     "pixels_per_unit": 64,
     "capabilities":
     [

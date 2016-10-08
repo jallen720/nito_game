@@ -1,4 +1,9 @@
 {
+    "camera":
+    [
+        "transform",
+        "viewport"
+    ],
     "renderer":
     [
         "sprite",
@@ -18,5 +23,10 @@
     "vertical_depth_modifier":
     [
         "transform"
+    ],
+    "camera_controller":
+    [
+        "transform",
+        "target"
     ]
 }
