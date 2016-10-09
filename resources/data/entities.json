@@ -7,6 +7,10 @@
                 "data": "Player"
             },
             {
+                "type": "render_layer",
+                "data": "world"
+            },
+            {
                 "type": "transform",
                 "data":
                 {
@@ -40,6 +44,10 @@
             {
                 "type": "id",
                 "data": "bot_0"
+            },
+            {
+                "type": "render_layer",
+                "data": "world"
             },
             {
                 "type": "transform",
@@ -80,6 +88,10 @@
                 "data": "bot_1"
             },
             {
+                "type": "render_layer",
+                "data": "world"
+            },
+            {
                 "type": "transform",
                 "data":
                 {
@@ -113,6 +125,10 @@
     {
         "components":
         [
+            {
+                "type": "render_layer",
+                "data": "world"
+            },
             {
                 "type": "transform",
                 "data":
@@ -168,6 +184,64 @@
         [
             "camera",
             "camera_controller"
+        ]
+    },
+    {
+        "components":
+        [
+            {
+                "type": "render_layer",
+                "data": "ui"
+            },
+            {
+                "type": "transform",
+                "data":
+                {
+                    "position": { "x": 1, "y": 1 },
+                    "scale": { "x": 1, "y": 1 }
+                }
+            },
+            {
+                "type": "sprite",
+                "data":
+                {
+                    "texture_path": "resources/textures/ui/button.png",
+                    "shader_pipeline_name": "texture"
+                }
+            }
+        ],
+        "systems":
+        [
+            "renderer"
+        ]
+    },
+    {
+        "components":
+        [
+            {
+                "type": "render_layer",
+                "data": "background"
+            },
+            {
+                "type": "transform",
+                "data":
+                {
+                    "position": { "x": 0, "y": 0 },
+                    "scale": { "x": 1, "y": 1 }
+                }
+            },
+            {
+                "type": "sprite",
+                "data":
+                {
+                    "texture_path": "resources/textures/background.png",
+                    "shader_pipeline_name": "texture"
+                }
+            }
+        ],
+        "systems":
+        [
+            "renderer"
         ]
     }
 ]

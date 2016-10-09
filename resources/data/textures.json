@@ -42,5 +42,27 @@
             "min_filter": "linear",
             "mag_filter": "linear"
         }
+    },
+    {
+        "path": "ui/button.png",
+        "format": "rgba",
+        "options":
+        {
+            "wrap_s": "repeat",
+            "wrap_t": "repeat",
+            "min_filter": "linear",
+            "mag_filter": "linear"
+        }
+    },
+    {
+        "path": "background.png",
+        "format": "rgb",
+        "options":
+        {
+            "wrap_s": "repeat",
+            "wrap_t": "repeat",
+            "min_filter": "linear",
+            "mag_filter": "linear"
+        }
     }
 ]
