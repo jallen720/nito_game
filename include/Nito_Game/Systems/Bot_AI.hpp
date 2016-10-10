@@ -14,7 +14,7 @@ namespace Nito_Game
 //
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void bot_ai_subscribe(const Nito::Entity entity);
-void bot_ai_update(const float delta_time);
+void bot_ai_update();
 
 
 } // namespace Nito_Game

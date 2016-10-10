@@ -4,6 +4,7 @@
 #include <string>
 #include <glm/glm.hpp>
 #include "Nito/Components.hpp"
+#include "Nito/Engine.hpp"
 
 
 using std::vector;
@@ -21,6 +22,9 @@ using Nito::get_entity;
 
 // Nito/Components.hpp
 using Nito::Transform;
+
+// Nito/Engine.hpp
+using Nito::get_delta_time;
 
 
 namespace Nito_Game
@@ -51,14 +55,15 @@ void bot_ai_subscribe(const Entity entity)
 }
 
 
-void bot_ai_update(const float delta_time)
+void bot_ai_update()
 {
+    float delta_time = get_delta_time();
+
     for (auto i = 0u; i < entity_transforms.size(); i++)
     {
         Transform * transform = entity_transforms[i];
         Transform * target_transform = entity_target_transforms[i];
         float movement_value = delta_time * *entity_speeds[i];
-
 
         // Don't move entity if the movement value will cause it to move past its target, preventing "jittering".
         if (distance(transform->position, target_transform->position) >= movement_value)

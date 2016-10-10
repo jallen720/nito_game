@@ -8,6 +8,7 @@
 #include <glm/glm.hpp>
 #include "Cpp_Utils/Collection.hpp"
 #include "Nito/Components.hpp"
+#include "Nito/Engine.hpp"
 
 
 using std::map;
@@ -26,6 +27,9 @@ using Nito::get_component;
 
 // Nito/Components.hpp
 using Nito::Transform;
+
+// Nito/Engine.hpp
+using Nito::get_delta_time;
 
 
 namespace Nito_Game
@@ -54,20 +58,21 @@ void controller_subscribe(const Entity entity)
 }
 
 
-void controller_update(const float delta_time)
+void controller_update()
 {
     static const map<int, const vec3> key_directions
     {
-        { GLFW_KEY_W, vec3( 0.0f, 1.0f, 0.0f) },
-        { GLFW_KEY_S, vec3( 0.0f,-1.0f, 0.0f) },
-        { GLFW_KEY_D, vec3( 1.0f, 0.0f, 0.0f) },
-        { GLFW_KEY_A, vec3(-1.0f, 0.0f, 0.0f) },
+        { GLFW_KEY_W , vec3( 0.0f, 1.0f, 0.0f) },
+        { GLFW_KEY_S , vec3( 0.0f,-1.0f, 0.0f) },
+        { GLFW_KEY_D , vec3( 1.0f, 0.0f, 0.0f) },
+        { GLFW_KEY_A , vec3(-1.0f, 0.0f, 0.0f) },
     };
 
 
     // Get speed modifier based on whether the left shift key is down.
     int shift_key_state = glfwGetKey(*window, GLFW_KEY_LEFT_SHIFT);
     float speed_modifier = (shift_key_state == GLFW_PRESS || shift_key_state == GLFW_REPEAT) ? 2.0f : 1.0f;
+    float delta_time = get_delta_time();
 
 
     for (auto i = 0u; i < entity_transforms.size(); i++)
