@@ -1,37 +1,22 @@
 [
     {
         "components":
-        [
+        {
+            "id": "Player",
+            "render_layer": "world",
+            "transform":
             {
-                "type": "id",
-                "data": "Player"
+                "position": { "x": 0.5, "y": 0.5 },
+                "scale": { "x": 1, "y": 1 },
+                "origin": { "x": 0.5, "y": 0 }
             },
+            "sprite":
             {
-                "type": "render_layer",
-                "data": "world"
+                "texture_path": "resources/textures/character.png",
+                "shader_pipeline_name": "texture"
             },
-            {
-                "type": "transform",
-                "data":
-                {
-                    "position": { "x": 0.5, "y": 0.5 },
-                    "scale": { "x": 1, "y": 1 },
-                    "origin": { "x": 0.5, "y": 0 }
-                }
-            },
-            {
-                "type": "sprite",
-                "data":
-                {
-                    "texture_path": "resources/textures/character.png",
-                    "shader_pipeline_name": "texture"
-                }
-            },
-            {
-                "type": "speed",
-                "data": 1
-            }
-        ],
+            "speed": 1
+        },
         "systems":
         [
             "renderer",
@@ -40,40 +25,22 @@
     },
     {
         "components":
-        [
+        {
+            "id": "Bot_0",
+            "render_layer": "world",
+            "transform":
             {
-                "type": "id",
-                "data": "bot_0"
+                "position": { "x": 1.5, "y": 0.5 },
+                "scale": { "x": 1, "y": 1 }
             },
+            "sprite":
             {
-                "type": "render_layer",
-                "data": "world"
+                "texture_path": "resources/textures/test.png",
+                "shader_pipeline_name": "texture"
             },
-            {
-                "type": "transform",
-                "data":
-                {
-                    "position": { "x": 1.5, "y": 0.5 },
-                    "scale": { "x": 1, "y": 1 }
-                }
-            },
-            {
-                "type": "sprite",
-                "data":
-                {
-                    "texture_path": "resources/textures/test.png",
-                    "shader_pipeline_name": "texture"
-                }
-            },
-            {
-                "type": "target",
-                "data": "Player"
-            },
-            {
-                "type": "speed",
-                "data": 0.5
-            }
-        ],
+            "target": "Player",
+            "speed": 0.5
+        },
         "systems":
         [
             "renderer",
@@ -82,40 +49,21 @@
     },
     {
         "components":
-        [
+        {
+            "render_layer": "world",
+            "transform":
             {
-                "type": "id",
-                "data": "bot_1"
+                "position": { "x": 2.5, "y": 1.5 },
+                "scale": { "x": 1, "y": 1 }
             },
+            "sprite":
             {
-                "type": "render_layer",
-                "data": "world"
+                "texture_path": "resources/textures/test.png",
+                "shader_pipeline_name": "texture"
             },
-            {
-                "type": "transform",
-                "data":
-                {
-                    "position": { "x": 2.5, "y": 1.5 },
-                    "scale": { "x": 1, "y": 1 }
-                }
-            },
-            {
-                "type": "sprite",
-                "data":
-                {
-                    "texture_path": "resources/textures/test.png",
-                    "shader_pipeline_name": "texture"
-                }
-            },
-            {
-                "type": "target",
-                "data": "bot_0"
-            },
-            {
-                "type": "speed",
-                "data": 0.25
-            }
-        ],
+            "target": "Bot_0",
+            "speed": 0.25
+        },
         "systems":
         [
             "renderer",
@@ -124,28 +72,19 @@
     },
     {
         "components":
-        [
+        {
+            "render_layer": "world",
+            "transform":
             {
-                "type": "render_layer",
-                "data": "world"
+                "position": { "x": 5, "y": 5 },
+                "scale": { "x": 0.5, "y": 0.5 }
             },
+            "sprite":
             {
-                "type": "transform",
-                "data":
-                {
-                    "position": { "x": 5, "y": 5 },
-                    "scale": { "x": 0.5, "y": 0.5 }
-                }
-            },
-            {
-                "type": "sprite",
-                "data":
-                {
-                    "texture_path": "resources/textures/polys.jpg",
-                    "shader_pipeline_name": "texture"
-                }
+                "texture_path": "resources/textures/polys.jpg",
+                "shader_pipeline_name": "texture"
             }
-        ],
+        },
         "systems":
         [
             "renderer"
@@ -153,33 +92,24 @@
     },
     {
         "components":
-        [
+        {
+            "transform":
             {
-                "type": "transform",
-                "data":
-                {
-                    "position": { "x": 0, "y": 0 },
-                    "scale": { "x": 1, "y": 1 },
-                    "origin": { "x": 0.5, "y": 0.5 }
-                }
+                "position": { "x": 0, "y": 0 },
+                "scale": { "x": 1, "y": 1 },
+                "origin": { "x": 0.5, "y": 0.5 }
             },
+            "viewport":
             {
-                "type": "viewport",
-                "data":
-                {
-                    "x": 0,
-                    "y": 0,
-                    "width": 1280,
-                    "height": 720,
-                    "z_near": -100,
-                    "z_far": 100
-                }
+                "x": 0,
+                "y": 0,
+                "width": 1280,
+                "height": 720,
+                "z_near": -100,
+                "z_far": 100
             },
-            {
-                "type": "target",
-                "data": "Player"
-            }
-        ],
+            "target": "Player"
+        },
         "systems":
         [
             "camera",
@@ -188,28 +118,19 @@
     },
     {
         "components":
-        [
+        {
+            "render_layer": "ui",
+            "transform":
             {
-                "type": "render_layer",
-                "data": "ui"
+                "position": { "x": 0.2, "y": 0.2 },
+                "scale": { "x": 1, "y": 1 }
             },
+            "sprite":
             {
-                "type": "transform",
-                "data":
-                {
-                    "position": { "x": 0.2, "y": 0.2 },
-                    "scale": { "x": 1, "y": 1 }
-                }
-            },
-            {
-                "type": "sprite",
-                "data":
-                {
-                    "texture_path": "resources/textures/ui/button.png",
-                    "shader_pipeline_name": "texture"
-                }
+                "texture_path": "resources/textures/ui/button.png",
+                "shader_pipeline_name": "texture"
             }
-        ],
+        },
         "systems":
         [
             "renderer"
@@ -217,28 +138,19 @@
     },
     {
         "components":
-        [
+        {
+            "render_layer": "background",
+            "transform":
             {
-                "type": "render_layer",
-                "data": "background"
+                "position": { "x": 0, "y": 0 },
+                "scale": { "x": 1, "y": 1 }
             },
+            "sprite":
             {
-                "type": "transform",
-                "data":
-                {
-                    "position": { "x": 0, "y": 0 },
-                    "scale": { "x": 1, "y": 1 }
-                }
-            },
-            {
-                "type": "sprite",
-                "data":
-                {
-                    "texture_path": "resources/textures/background.png",
-                    "shader_pipeline_name": "texture"
-                }
+                "texture_path": "resources/textures/background.png",
+                "shader_pipeline_name": "texture"
             }
-        ],
+        },
         "systems":
         [
             "renderer"
