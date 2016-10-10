@@ -1,12 +1,14 @@
 {
     "camera":
     [
-        "transform",
-        "viewport"
+        "dimensions",
+        "viewport",
+        "transform"
     ],
     "renderer":
     [
         "render_layer",
+        "dimensions",
         "sprite",
         "transform"
     ],
