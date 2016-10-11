@@ -17,7 +17,6 @@ using std::vector;
 using std::map;
 
 // Nito/Engine.hpp
-using Nito::get_window;
 using Nito::add_update_handler;
 using Nito::run_engine;
 using Nito::Update_Handler;
@@ -85,7 +84,7 @@ static map<string, const Component_Handler> component_handlers
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 int run()
 {
-    controller_init(get_window());
+    controller_init();
     for_each(update_handlers, add_update_handler);
     for_each(component_handlers, set_component_handler);
     for_each(system_subscribe_handlers, set_system_subscribe_handler);

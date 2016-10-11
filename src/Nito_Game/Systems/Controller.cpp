@@ -8,7 +8,7 @@
 #include <glm/glm.hpp>
 #include "Cpp_Utils/Collection.hpp"
 #include "Nito/Components.hpp"
-#include "Nito/Engine.hpp"
+#include "Nito/Window.hpp"
 
 
 using std::map;
@@ -28,7 +28,8 @@ using Nito::get_component;
 // Nito/Components.hpp
 using Nito::Transform;
 
-// Nito/Engine.hpp
+// Nito/Window.hpp
+using Nito::get_window;
 using Nito::get_delta_time;
 
 
@@ -94,9 +95,9 @@ void controller_update()
 }
 
 
-void controller_init(GLFWwindow ** _window)
+void controller_init()
 {
-    window = _window;
+    window = get_window();
 }
 
 

@@ -18,7 +18,7 @@ namespace Nito_Game
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void controller_subscribe(const Nito::Entity entity);
 void controller_update();
-void controller_init(GLFWwindow ** _window);
+void controller_init();
 
 
 } // namespace Nito_Game
