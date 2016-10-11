@@ -8,7 +8,6 @@
     "renderer":
     [
         "render_layer",
-        "dimensions",
         "sprite",
         "transform"
     ],

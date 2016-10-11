@@ -4,17 +4,14 @@
         {
             "id": "Player",
             "render_layer": "world",
-            "dimensions":
-            {
-                "width": 128,
-                "height": 64,
-                "origin": { "x": 0.5, "y": 0 }
-            },
             "sprite":
             {
                 "texture_path": "resources/textures/character.png",
                 "shader_pipeline_name": "texture",
-                "use_texture_dimensions": true
+                "dimensions":
+                {
+                    "origin": { "x": 0.5, "y": 0 }
+                }
             },
             "transform":
             {
@@ -34,16 +31,10 @@
         {
             "id": "Bot_0",
             "render_layer": "world",
-            "dimensions":
-            {
-                "width": 0,
-                "height": 0
-            },
             "sprite":
             {
                 "texture_path": "resources/textures/test.png",
-                "shader_pipeline_name": "texture",
-                "use_texture_dimensions": true
+                "shader_pipeline_name": "texture"
             },
             "transform":
             {
@@ -63,16 +54,10 @@
         "components":
         {
             "render_layer": "world",
-            "dimensions":
-            {
-                "width": 0,
-                "height": 0
-            },
             "sprite":
             {
                 "texture_path": "resources/textures/test.png",
-                "shader_pipeline_name": "texture",
-                "use_texture_dimensions": true
+                "shader_pipeline_name": "texture"
             },
             "transform":
             {
@@ -92,16 +77,10 @@
         "components":
         {
             "render_layer": "world",
-            "dimensions":
-            {
-                "width": 0,
-                "height": 0
-            },
             "sprite":
             {
                 "texture_path": "resources/textures/polys.jpg",
-                "shader_pipeline_name": "texture",
-                "use_texture_dimensions": true
+                "shader_pipeline_name": "texture"
             },
             "transform":
             {
@@ -147,16 +126,10 @@
         "components":
         {
             "render_layer": "ui",
-            "dimensions":
-            {
-                "width": 0,
-                "height": 0
-            },
             "sprite":
             {
                 "texture_path": "resources/textures/ui/button.png",
-                "shader_pipeline_name": "texture",
-                "use_texture_dimensions": true
+                "shader_pipeline_name": "texture"
             },
             "transform":
             {
@@ -173,16 +146,10 @@
         "components":
         {
             "render_layer": "background",
-            "dimensions":
-            {
-                "width": 0,
-                "height": 0
-            },
             "sprite":
             {
                 "texture_path": "resources/textures/background.png",
-                "shader_pipeline_name": "texture",
-                "use_texture_dimensions": true
+                "shader_pipeline_name": "texture"
             },
             "transform":
             {
