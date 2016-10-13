@@ -26,5 +26,11 @@
     [
         "transform",
         "target"
+    ],
+    "ui_mouse_event_dispatcher":
+    [
+        "transform",
+        "sprite",
+        "ui_mouse_event_handlers"
     ]
 }

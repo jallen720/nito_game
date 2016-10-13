@@ -135,11 +135,13 @@
             {
                 "position": { "x": 0.2, "y": 0.2 },
                 "scale": { "x": 1, "y": 1 }
-            }
+            },
+            "ui_mouse_event_handlers": {}
         },
         "systems":
         [
-            "renderer"
+            "renderer",
+            "ui_mouse_event_dispatcher"
         ]
     },
     {
