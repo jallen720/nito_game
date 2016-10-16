@@ -44,7 +44,29 @@
         }
     },
     {
-        "path": "ui/button.png",
+        "path": "ui/button_default.png",
+        "format": "rgba",
+        "options":
+        {
+            "wrap_s": "repeat",
+            "wrap_t": "repeat",
+            "min_filter": "linear",
+            "mag_filter": "linear"
+        }
+    },
+    {
+        "path": "ui/button_hover.png",
+        "format": "rgba",
+        "options":
+        {
+            "wrap_s": "repeat",
+            "wrap_t": "repeat",
+            "min_filter": "linear",
+            "mag_filter": "linear"
+        }
+    },
+    {
+        "path": "ui/button_pressed.png",
         "format": "rgba",
         "options":
         {

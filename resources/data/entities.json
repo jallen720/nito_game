@@ -126,9 +126,14 @@
         "components":
         {
             "render_layer": "ui",
+            "button":
+            {
+                "hover_texture_path": "resources/textures/ui/button_hover.png",
+                "pressed_texture_path": "resources/textures/ui/button_pressed.png"
+            },
             "sprite":
             {
-                "texture_path": "resources/textures/ui/button.png",
+                "texture_path": "resources/textures/ui/button_default.png",
                 "shader_pipeline_name": "texture"
             },
             "transform":
@@ -141,7 +146,8 @@
         "systems":
         [
             "renderer",
-            "ui_mouse_event_dispatcher"
+            "ui_mouse_event_dispatcher",
+            "button"
         ]
     },
     {
