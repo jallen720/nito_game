@@ -147,7 +147,8 @@
         [
             "renderer",
             "ui_mouse_event_dispatcher",
-            "button"
+            "button",
+            "demo_button"
         ]
     },
     {

@@ -63,5 +63,16 @@
         [
             "ui_mouse_event_dispatcher"
         ]
+    },
+    "demo_button":
+    {
+        "required_components":
+        [
+            "button"
+        ],
+        "required_systems":
+        [
+            "button"
+        ]
     }
 }

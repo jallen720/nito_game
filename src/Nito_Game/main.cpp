@@ -10,6 +10,7 @@
 #include "Nito_Game/Systems/Controller.hpp"
 #include "Nito_Game/Systems/Bot_AI.hpp"
 #include "Nito_Game/Systems/Camera_Controller.hpp"
+#include "Nito_Game/Systems/Demo_Button.hpp"
 
 
 using std::string;
@@ -61,6 +62,7 @@ static map<string, const System_Subscribe_Handler> system_subscribe_handlers
     { "controller"        , controller_subscribe        },
     { "bot_ai"            , bot_ai_subscribe            },
     { "camera_controller" , camera_controller_subscribe },
+    { "demo_button"       , demo_button_subscribe       },
 };
 
 
