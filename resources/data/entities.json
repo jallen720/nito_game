@@ -15,8 +15,7 @@
             },
             "transform":
             {
-                "position": { "x": 0.5, "y": 0.5 },
-                "scale": { "x": 1, "y": 1 }
+                "position": { "x": 0.5, "y": 0.5 }
             },
             "speed": 1
         },
@@ -38,8 +37,7 @@
             },
             "transform":
             {
-                "position": { "x": 1.5, "y": 0.5 },
-                "scale": { "x": 1, "y": 1 }
+                "position": { "x": 1.5, "y": 0.5 }
             },
             "target": "Player",
             "speed": 0.5
@@ -61,8 +59,7 @@
             },
             "transform":
             {
-                "position": { "x": 2.5, "y": 1.5 },
-                "scale": { "x": 1, "y": 1 }
+                "position": { "x": 2.5, "y": 1.5 }
             },
             "target": "Bot_0",
             "speed": 0.25
@@ -109,11 +106,7 @@
                 "z_near": -100,
                 "z_far": 100
             },
-            "transform":
-            {
-                "position": { "x": 0, "y": 0 },
-                "scale": { "x": 1, "y": 1 }
-            },
+            "transform": {},
             "target": "Player"
         },
         "systems":
@@ -138,8 +131,7 @@
             },
             "transform":
             {
-                "position": { "x": 0.2, "y": 0.2 },
-                "scale": { "x": 1, "y": 1 }
+                "position": { "x": 0.2, "y": 0.2 }
             },
             "ui_mouse_event_handlers": {}
         },
@@ -160,11 +152,7 @@
                 "texture_path": "resources/textures/background.png",
                 "shader_pipeline_name": "texture"
             },
-            "transform":
-            {
-                "position": { "x": 0, "y": 0 },
-                "scale": { "x": 1, "y": 1 }
-            }
+            "transform": {}
         },
         "systems":
         [
