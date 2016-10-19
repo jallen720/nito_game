@@ -42,6 +42,15 @@
             "target"
         ]
     },
+    "ui_transform":
+    {
+        "required_components":
+        [
+            "transform",
+            "ui_transform",
+            "sprite"
+        ]
+    },
     "ui_mouse_event_dispatcher":
     {
         "required_components":
