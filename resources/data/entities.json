@@ -273,11 +273,30 @@
             "text":
             {
                 "font": "resources/fonts/Ubuntu-L.ttf",
-                "value": "123456Hello, pjqylLiI!"
+                "value": "1234afsdf56Hel lo, pajqylLiI!"
             },
             "transform":
             {
                 "position": { "x": 3, "y": 3 }
+            }
+        },
+        "systems":
+        [
+            "text_renderer"
+        ]
+    },
+    {
+        "components":
+        {
+            "render_layer": "ui",
+            "text":
+            {
+                "font": "resources/fonts/Ubuntu-L.ttf",
+                "value": "aAgSbbe5%1bAa da saerwsdgf!"
+            },
+            "transform":
+            {
+                "position": { "x": 3, "y": 2 }
             }
         },
         "systems":
