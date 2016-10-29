@@ -83,5 +83,14 @@
         [
             "button"
         ]
+    },
+    "text_renderer":
+    {
+        "required_components":
+        [
+            "render_layer",
+            "text",
+            "transform"
+        ]
     }
 }

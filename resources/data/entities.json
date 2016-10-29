@@ -265,5 +265,24 @@
         [
             "renderer"
         ]
+    },
+    {
+        "components":
+        {
+            "render_layer": "ui",
+            "text":
+            {
+                "font": "resources/fonts/Ubuntu-L.ttf",
+                "value": "123456Hello, pjqylLiI!"
+            },
+            "transform":
+            {
+                "position": { "x": 3, "y": 3 }
+            }
+        },
+        "systems":
+        [
+            "text_renderer"
+        ]
     }
 ]
