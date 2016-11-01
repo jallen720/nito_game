@@ -273,7 +273,8 @@
             "text":
             {
                 "font": "resources/fonts/Ubuntu-L.ttf",
-                "value": "1234afsdf56Hel lo, pajqylLiI!"
+                "color": { "g": 0.5 },
+                "value": "This, my friend, is some text!"
             },
             "transform":
             {
@@ -292,11 +293,12 @@
             "text":
             {
                 "font": "resources/fonts/Ubuntu-L.ttf",
-                "value": "aAgSbbe5%1bAa da saerwsdgf!"
+                "color": { "b": 0.5 },
+                "value": "More text!"
             },
             "transform":
             {
-                "position": { "x": 3, "y": 2 }
+                "position": { "x": 12, "y": 2 }
             }
         },
         "systems":

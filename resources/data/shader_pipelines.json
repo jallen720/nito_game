@@ -26,5 +26,19 @@
                 "source_path": "texture"
             }
         ]
+    },
+    {
+        "name": "text",
+        "shaders":
+        [
+            {
+                "type": "vertex",
+                "source_path": "default"
+            },
+            {
+                "type": "fragment",
+                "source_path": "text"
+            }
+        ]
     }
 ]
