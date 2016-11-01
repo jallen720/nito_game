@@ -292,7 +292,7 @@
             "render_layer": "ui",
             "text":
             {
-                "font": "resources/fonts/Ubuntu-L.ttf",
+                "font": "resources/fonts/UbuntuMono-R.ttf",
                 "color": { "b": 0.5 },
                 "value": "More text!"
             },
