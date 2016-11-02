@@ -1,14 +1,15 @@
 [
     {
         "name": "ui",
-        "render_space": "screen"
+        "space": "screen"
     },
     {
         "name": "world",
-        "render_space": "world"
+        "space": "world",
+        "sorting": "highest_y"
     },
     {
         "name": "background",
-        "render_space": "screen"
+        "space": "screen"
     }
 ]
