@@ -2,43 +2,25 @@
     {
         "name": "dev",
         "shaders":
-        [
-            {
-                "type": "vertex",
-                "source_path": "dev"
-            },
-            {
-                "type": "fragment",
-                "source_path": "dev"
-            }
-        ]
+        {
+            "vertex": "resources/shaders/dev.vert",
+            "fragment": "resources/shaders/dev.frag"
+        }
     },
     {
         "name": "texture",
         "shaders":
-        [
-            {
-                "type": "vertex",
-                "source_path": "default"
-            },
-            {
-                "type": "fragment",
-                "source_path": "texture"
-            }
-        ]
+        {
+            "vertex": "resources/shaders/default.vert",
+            "fragment": "resources/shaders/texture.frag"
+        }
     },
     {
         "name": "text",
         "shaders":
-        [
-            {
-                "type": "vertex",
-                "source_path": "default"
-            },
-            {
-                "type": "fragment",
-                "source_path": "text"
-            }
-        ]
+        {
+            "vertex": "resources/shaders/default.vert",
+            "fragment": "resources/shaders/text.frag"
+        }
     }
 ]
