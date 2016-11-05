@@ -86,5 +86,16 @@
             "min_filter": "linear",
             "mag_filter": "linear"
         }
+    },
+    {
+        "path": "box.jpg",
+        "format": "rgb",
+        "options":
+        {
+            "wrap_s": "repeat",
+            "wrap_t": "repeat",
+            "min_filter": "linear",
+            "mag_filter": "linear"
+        }
     }
 ]
