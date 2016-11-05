@@ -92,5 +92,14 @@
             "text",
             "transform"
         ]
+    },
+    "local_transform":
+    {
+        "required_components":
+        [
+            "parent",
+            "transform",
+            "local_transform"
+        ]
     }
 }

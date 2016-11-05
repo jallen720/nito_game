@@ -305,5 +305,52 @@
         [
             "text_renderer"
         ]
+    },
+    {
+        "components":
+        {
+            "render_layer": "world",
+            "id": "Box",
+            "sprite":
+            {
+                "texture_path": "resources/textures/box.jpg",
+                "shader_pipeline_name": "texture",
+                "dimensions":
+                {
+                    "origin": { "x": 0.5, "y": 0 }
+                }
+            },
+            "parent": "Player",
+            "transform": {},
+            "local_transform":
+            {
+                "position": { "x": 0, "y": 1 },
+                "scale": { "x": 0.25, "y": 0.25 }
+            }
+        },
+        "systems":
+        [
+            "renderer",
+            "local_transform"
+        ]
+    },
+    {
+        "components":
+        {
+            "render_layer": "world",
+            "sprite":
+            {
+                "texture_path": "resources/textures/polys.jpg",
+                "shader_pipeline_name": "texture"
+            },
+            "parent": "Box",
+            "transform": {},
+            "local_transform": {}
+        },
+        "systems":
+        [
+            "renderer",
+            "local_transform"
+        ]
     }
 ]
