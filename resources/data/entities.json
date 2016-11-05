@@ -317,7 +317,7 @@
                 "shader_pipeline_name": "texture",
                 "dimensions":
                 {
-                    "origin": { "x": 0.5, "y": 0 }
+                    "origin": { "x": 1, "y": 0 }
                 }
             },
             "parent": "Player",
@@ -338,18 +338,21 @@
         "components":
         {
             "render_layer": "world",
-            "sprite":
+            "text":
             {
-                "texture_path": "resources/textures/polys.jpg",
-                "shader_pipeline_name": "texture"
+                "font": "resources/fonts/Ubuntu-L.ttf",
+                "value": "Player"
             },
-            "parent": "Box",
+            "parent": "Player",
             "transform": {},
-            "local_transform": {}
+            "local_transform":
+            {
+                "scale": { "x": 0.5, "y": 0.5 }
+            }
         },
         "systems":
         [
-            "renderer",
+            "text_renderer",
             "local_transform"
         ]
     }
