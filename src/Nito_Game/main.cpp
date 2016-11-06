@@ -69,7 +69,7 @@ static map<string, const System_Subscribe_Handler> system_subscribe_handlers
 static map<string, const Component_Handler> component_handlers
 {
     {
-        "target",
+        "target_id",
         string_component_handler
     },
     {

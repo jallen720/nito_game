@@ -48,7 +48,7 @@ static vector<float *> entity_speeds;
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void bot_ai_subscribe(const Entity entity)
 {
-    auto target = (string *)get_component(entity, "target");
+    auto target = (string *)get_component(entity, "target_id");
     entity_transforms.push_back((Transform *)get_component(entity, "transform"));
     entity_target_transforms.push_back((Transform *)get_component(get_entity(*target), "transform"));
     entity_speeds.push_back((float *)get_component(entity, "speed"));

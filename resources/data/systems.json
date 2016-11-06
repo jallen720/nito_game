@@ -30,7 +30,7 @@
         "required_components":
         [
             "transform",
-            "target",
+            "target_id",
             "speed"
         ]
     },
@@ -39,7 +39,7 @@
         "required_components":
         [
             "transform",
-            "target"
+            "target_id"
         ]
     },
     "ui_transform":
@@ -97,7 +97,7 @@
     {
         "required_components":
         [
-            "parent",
+            "parent_id",
             "transform",
             "local_transform"
         ]

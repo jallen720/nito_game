@@ -37,9 +37,9 @@ static vector<Transform *> entity_target_transforms;
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void camera_controller_subscribe(const Entity entity)
 {
-    auto target = (string *)get_component(entity, "target");
+    auto target_id = (string *)get_component(entity, "target_id");
     entity_transforms.push_back((Transform *)get_component(entity, "transform"));
-    entity_target_transforms.push_back((Transform *)get_component(get_entity(*target), "transform"));
+    entity_target_transforms.push_back((Transform *)get_component(get_entity(*target_id), "transform"));
 }
 
 

@@ -39,7 +39,7 @@
             {
                 "position": { "x": 1.5, "y": 0.5 }
             },
-            "target": "Player",
+            "target_id": "Player",
             "speed": 0.5
         },
         "systems":
@@ -61,7 +61,7 @@
             {
                 "position": { "x": 2.5, "y": 1.5 }
             },
-            "target": "Bot_0",
+            "target_id": "Bot_0",
             "speed": 0.25
         },
         "systems":
@@ -107,7 +107,7 @@
                 "z_far": 100
             },
             "transform": {},
-            "target": "Player"
+            "target_id": "Player"
         },
         "systems":
         [
@@ -320,7 +320,7 @@
                     "origin": { "x": 0.5, "y": 0 }
                 }
             },
-            "parent": "Player",
+            "parent_id": "Player",
             "transform": {},
             "local_transform":
             {
@@ -343,7 +343,7 @@
                 "font": "resources/fonts/Ubuntu-L.ttf",
                 "value": "Player"
             },
-            "parent": "Player",
+            "parent_id": "Player",
             "transform": {},
             "local_transform":
             {
