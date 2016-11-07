@@ -1,14 +1,12 @@
-#include <GL/glew.h>
-
 #include "Nito_Game/Systems/Controller.hpp"
 
 #include <map>
 #include <vector>
-#include <GLFW/glfw3.h>
 #include <glm/glm.hpp>
 #include "Cpp_Utils/Collection.hpp"
 #include "Nito/Components.hpp"
 #include "Nito/Window.hpp"
+#include "Nito/Input.hpp"
 
 
 using std::map;
@@ -32,6 +30,11 @@ using Nito::Transform;
 using Nito::get_window;
 using Nito::get_delta_time;
 
+// Nito/Input.hpp
+using Nito::Keys;
+using Nito::Key_Actions;
+using Nito::get_key_action;
+
 
 namespace Nito_Game
 {
@@ -44,7 +47,6 @@ namespace Nito_Game
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 static vector<Transform *> entity_transforms;
 static vector<float *> entity_speeds;
-static GLFWwindow ** window;
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -61,28 +63,31 @@ void controller_subscribe(const Entity entity)
 
 void controller_update()
 {
-    static const map<int, const vec3> key_directions
+    static const map<Keys, const vec3> key_directions
     {
-        { GLFW_KEY_W , vec3( 0.0f, 1.0f, 0.0f) },
-        { GLFW_KEY_S , vec3( 0.0f,-1.0f, 0.0f) },
-        { GLFW_KEY_D , vec3( 1.0f, 0.0f, 0.0f) },
-        { GLFW_KEY_A , vec3(-1.0f, 0.0f, 0.0f) },
+        { Keys::W , vec3( 0.0f, 1.0f, 0.0f) },
+        { Keys::S , vec3( 0.0f,-1.0f, 0.0f) },
+        { Keys::D , vec3( 1.0f, 0.0f, 0.0f) },
+        { Keys::A , vec3(-1.0f, 0.0f, 0.0f) },
     };
 
 
     // Get speed modifier based on whether the left shift key is down.
-    int shift_key_state = glfwGetKey(*window, GLFW_KEY_LEFT_SHIFT);
-    float speed_modifier = (shift_key_state == GLFW_PRESS || shift_key_state == GLFW_REPEAT) ? 2.0f : 1.0f;
     float delta_time = get_delta_time();
+    Key_Actions shift_key_action = get_key_action(Keys::LEFT_SHIFT);
 
+    float speed_modifier =
+        (shift_key_action == Key_Actions::PRESS || shift_key_action == Key_Actions::REPEAT)
+        ? 2.0f
+        : 1.0f;
 
     for (auto i = 0u; i < entity_transforms.size(); i++)
     {
-        for_each(key_directions, [&](const int key, const vec3 & direction) -> void
+        for_each(key_directions, [&](const Keys key, const vec3 & direction) -> void
         {
-            int key_state = glfwGetKey(*window, key);
+            Key_Actions key_action = get_key_action(key);
 
-            if (key_state == GLFW_PRESS || key_state == GLFW_REPEAT)
+            if (key_action == Key_Actions::PRESS || key_action == Key_Actions::REPEAT)
             {
                 entity_transforms[i]->position +=
                     normalize(direction) *
@@ -92,12 +97,6 @@ void controller_update()
             }
         });
     }
-}
-
-
-void controller_init()
-{
-    window = get_window();
 }
 
 
