@@ -2,17 +2,17 @@
 
 #include <string>
 #include <vector>
-#include "Nito/Input.hpp"
+#include "Nito/APIs/Input.hpp"
 
 
 using std::string;
 using std::vector;
 
-// Nito/ECS.hpp
+// Nito/APIs/ECS.hpp
 using Nito::Entity;
 using Nito::get_component;
 
-// Nito/Input.hpp
+// Nito/APIs/Input.hpp
 using Nito::Keys;
 using Nito::Key_Actions;
 using Nito::set_control_handler;

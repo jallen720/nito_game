@@ -5,8 +5,8 @@
 #include <glm/glm.hpp>
 #include "Cpp_Utils/Collection.hpp"
 #include "Nito/Components.hpp"
-#include "Nito/Window.hpp"
-#include "Nito/Input.hpp"
+#include "Nito/APIs/Window.hpp"
+#include "Nito/APIs/Input.hpp"
 
 
 using std::map;
@@ -19,17 +19,17 @@ using glm::normalize;
 // Cpp_Utils/Container.hpp
 using Cpp_Utils::for_each;
 
-// Nito/ECS.hpp
+// Nito/APIs/ECS.hpp
 using Nito::Entity;
 using Nito::get_component;
 
 // Nito/Components.hpp
 using Nito::Transform;
 
-// Nito/Window.hpp
+// Nito/APIs/Window.hpp
 using Nito::get_delta_time;
 
-// Nito/Input.hpp
+// Nito/APIs/Input.hpp
 using Nito::Keys;
 using Nito::Key_Actions;
 using Nito::get_key_action;

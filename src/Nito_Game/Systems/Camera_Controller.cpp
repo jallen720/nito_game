@@ -8,7 +8,7 @@
 using std::vector;
 using std::string;
 
-// Nito/ECS.hpp
+// Nito/APIs/ECS.hpp
 using Nito::Entity;
 using Nito::get_entity;
 using Nito::get_component;

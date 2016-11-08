@@ -4,7 +4,7 @@
 #include <string>
 #include <glm/glm.hpp>
 #include "Nito/Components.hpp"
-#include "Nito/Window.hpp"
+#include "Nito/APIs/Window.hpp"
 
 
 using std::vector;
@@ -15,7 +15,7 @@ using glm::vec3;
 using glm::normalize;
 using glm::distance;
 
-// Nito/ECS.hpp
+// Nito/APIs/ECS.hpp
 using Nito::Entity;
 using Nito::get_component;
 using Nito::get_entity;
@@ -23,7 +23,7 @@ using Nito::get_entity;
 // Nito/Components.hpp
 using Nito::Transform;
 
-// Nito/Window.hpp
+// Nito/APIs/Window.hpp
 using Nito::get_delta_time;
 
 

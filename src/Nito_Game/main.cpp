@@ -2,8 +2,8 @@
 #include <vector>
 #include <map>
 #include "Nito/Engine.hpp"
-#include "Nito/ECS.hpp"
 #include "Nito/Utilities.hpp"
+#include "Nito/APIs/ECS.hpp"
 #include "Cpp_Utils/Collection.hpp"
 #include "Cpp_Utils/JSON.hpp"
 
@@ -23,7 +23,7 @@ using Nito::add_update_handler;
 using Nito::run_engine;
 using Nito::Update_Handler;
 
-// Nito/ECS.hpp
+// Nito/APIs/ECS.hpp
 using Nito::set_component_handler;
 using Nito::set_system_subscribe_handler;
 using Nito::Component;

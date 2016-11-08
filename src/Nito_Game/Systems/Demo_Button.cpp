@@ -3,7 +3,7 @@
 #include "Nito/Components.hpp"
 
 
-// Nito/ECS.hpp
+// Nito/APIs/ECS.hpp
 using Nito::Entity;
 using Nito::get_component;
 
