@@ -101,5 +101,12 @@
             "transform",
             "local_transform"
         ]
+    },
+    "parent_switcher":
+    {
+        "required_components":
+        [
+            "parent_id"
+        ]
     }
 }

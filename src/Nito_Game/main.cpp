@@ -11,6 +11,7 @@
 #include "Nito_Game/Systems/Bot_AI.hpp"
 #include "Nito_Game/Systems/Camera_Controller.hpp"
 #include "Nito_Game/Systems/Demo_Button.hpp"
+#include "Nito_Game/Systems/Parent_Switcher.hpp"
 
 
 using std::string;
@@ -63,6 +64,7 @@ static map<string, const System_Subscribe_Handler> system_subscribe_handlers
     { "bot_ai"            , bot_ai_subscribe            },
     { "camera_controller" , camera_controller_subscribe },
     { "demo_button"       , demo_button_subscribe       },
+    { "parent_switcher"   , parent_switcher_subscribe   },
 };
 
 
@@ -86,6 +88,7 @@ static map<string, const Component_Handler> component_handlers
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 int run()
 {
+    parent_switcher_init();
     for_each(update_handlers, add_update_handler);
     for_each(component_handlers, set_component_handler);
     for_each(system_subscribe_handlers, set_system_subscribe_handler);

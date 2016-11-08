@@ -331,7 +331,8 @@
         "systems":
         [
             "renderer",
-            "local_transform"
+            "local_transform",
+            "parent_switcher"
         ]
     },
     {
