@@ -27,7 +27,6 @@ using Nito::get_component;
 using Nito::Transform;
 
 // Nito/Window.hpp
-using Nito::get_window;
 using Nito::get_delta_time;
 
 // Nito/Input.hpp
