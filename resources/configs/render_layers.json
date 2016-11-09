@@ -6,7 +6,7 @@
     {
         "name": "world",
         "space": "world",
-        "sorting": "highest_y"
+        "sorting": "highest_z"
     },
     {
         "name": "background",
