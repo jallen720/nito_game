@@ -108,5 +108,12 @@
         [
             "parent_id"
         ]
+    },
+    "depth_handler":
+    {
+        "required_components":
+        [
+            "transform"
+        ]
     }
 }

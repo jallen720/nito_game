@@ -1,0 +1,53 @@
+#include "Nito_Game/Systems/Depth_Handler.hpp"
+
+#include <vector>
+#include <glm/glm.hpp>
+#include "Nito/Components.hpp"
+
+
+using std::vector;
+
+// glm/glm.hpp
+using glm::vec3;
+
+// Nito/APIs/ECS.hpp
+using Nito::Entity;
+using Nito::get_component;
+
+// Nito/Components.hpp
+using Nito::Transform;
+
+
+namespace Nito_Game
+{
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+// Data
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+static vector<vec3 *> entity_positions;
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+// Interface
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+void depth_handler_subscribe(const Entity entity)
+{
+    entity_positions.push_back(&((Transform *)get_component(entity, "transform"))->position);
+}
+
+
+void depth_handler_update()
+{
+    for (vec3 * entity_position : entity_positions)
+    {
+        entity_position->z = entity_position->y;
+    }
+}
+
+
+} // namespace Nito_Game

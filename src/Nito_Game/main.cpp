@@ -11,6 +11,7 @@
 #include "Nito_Game/Systems/Bot_AI.hpp"
 #include "Nito_Game/Systems/Camera_Controller.hpp"
 #include "Nito_Game/Systems/Demo_Button.hpp"
+#include "Nito_Game/Systems/Depth_Handler.hpp"
 #include "Nito_Game/Systems/Parent_Switcher.hpp"
 
 
@@ -52,6 +53,7 @@ namespace Nito_Game
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 static vector<Update_Handler> update_handlers
 {
+    depth_handler_update,
     controller_update,
     bot_ai_update,
     camera_controller_update,
@@ -64,6 +66,7 @@ static map<string, const System_Subscribe_Handler> system_subscribe_handlers
     { "bot_ai"            , bot_ai_subscribe            },
     { "camera_controller" , camera_controller_subscribe },
     { "demo_button"       , demo_button_subscribe       },
+    { "depth_handler"     , depth_handler_subscribe     },
     { "parent_switcher"   , parent_switcher_subscribe   },
 };
 

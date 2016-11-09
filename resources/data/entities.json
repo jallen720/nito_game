@@ -22,7 +22,8 @@
         "systems":
         [
             "renderer",
-            "controller"
+            "controller",
+            "depth_handler"
         ]
     },
     {
@@ -45,7 +46,8 @@
         "systems":
         [
             "renderer",
-            "bot_ai"
+            "bot_ai",
+            "depth_handler"
         ]
     },
     {
@@ -67,7 +69,8 @@
         "systems":
         [
             "renderer",
-            "bot_ai"
+            "bot_ai",
+            "depth_handler"
         ]
     },
     {
@@ -87,7 +90,8 @@
         },
         "systems":
         [
-            "renderer"
+            "renderer",
+            "depth_handler"
         ]
     },
     {
@@ -342,6 +346,7 @@
             "text":
             {
                 "font": "resources/fonts/Ubuntu-L.ttf",
+                "color": { "b": 0.75, "r": 0.75 },
                 "value": "Player"
             },
             "parent_id": "Player",
