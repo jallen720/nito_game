@@ -77,7 +77,8 @@
     {
         "required_components":
         [
-            "button"
+            "button",
+            "scene_to_load"
         ],
         "required_systems":
         [

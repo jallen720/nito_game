@@ -138,7 +138,8 @@
             {
                 "position": { "x": 0.2, "y": 0.2 }
             },
-            "ui_mouse_event_handlers": {}
+            "ui_mouse_event_handlers": {},
+            "scene_to_load": "default"
         },
         "systems":
         [

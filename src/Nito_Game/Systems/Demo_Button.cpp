@@ -44,11 +44,12 @@ static map<Entity, Button *> entity_buttons;
 void demo_button_subscribe(const Entity entity)
 {
     auto button = (Button *)get_component(entity, "button");
+    const auto scene_to_load = (string *)get_component(entity, "scene_to_load");
     entity_buttons[entity] = button;
 
-    button->click_handler = []() -> void
+    button->click_handler = [=]() -> void
     {
-        set_scene_to_load("other");
+        set_scene_to_load(*scene_to_load);
     };
 }
 

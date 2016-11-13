@@ -113,6 +113,13 @@ static map<string, const Component_Handlers> game_component_handlers
         },
     },
     {
+        "scene_to_load",
+        {
+            get_component_allocator<string>(),
+            get_component_deallocator<string>(),
+        },
+    },
+    {
         "speed",
         {
             get_component_allocator<float>(),
