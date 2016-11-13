@@ -17,6 +17,7 @@ namespace Nito_Game
 //
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void controller_subscribe(const Nito::Entity entity);
+void controller_unsubscribe(const Nito::Entity entity);
 void controller_update();
 
 

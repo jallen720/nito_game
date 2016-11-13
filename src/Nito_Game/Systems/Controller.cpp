@@ -1,23 +1,19 @@
 #include "Nito_Game/Systems/Controller.hpp"
 
 #include <map>
-#include <vector>
 #include <glm/glm.hpp>
-#include "Cpp_Utils/Collection.hpp"
 #include "Nito/Components.hpp"
 #include "Nito/APIs/Window.hpp"
 #include "Nito/APIs/Input.hpp"
+#include "Cpp_Utils/Collection.hpp"
+#include "Cpp_Utils/Map.hpp"
 
 
 using std::map;
-using std::vector;
 
 // glm/glm.hpp
 using glm::vec3;
 using glm::normalize;
-
-// Cpp_Utils/Container.hpp
-using Cpp_Utils::for_each;
 
 // Nito/APIs/ECS.hpp
 using Nito::Entity;
@@ -34,6 +30,12 @@ using Nito::Keys;
 using Nito::Key_Actions;
 using Nito::get_key_action;
 
+// Cpp_Utils/Collection.hpp
+using Cpp_Utils::for_each;
+
+/// Cpp_Utils/Map.hpp
+using Cpp_Utils::remove;
+
 
 namespace Nito_Game
 {
@@ -41,11 +43,22 @@ namespace Nito_Game
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //
+// Data Structures
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+struct Entity_State
+{
+    Transform * transform;
+    const float * speed;
+};
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
 // Data
 //
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-static vector<Transform *> entity_transforms;
-static vector<float *> entity_speeds;
+static map<Entity, Entity_State> entity_states;
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -55,8 +68,17 @@ static vector<float *> entity_speeds;
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void controller_subscribe(const Entity entity)
 {
-    entity_transforms.push_back((Transform *)get_component(entity, "transform"));
-    entity_speeds.push_back((float *)get_component(entity, "speed"));
+    entity_states[entity] =
+    {
+        (Transform *)get_component(entity, "transform"),
+        (float *)get_component(entity, "speed"),
+    };
+}
+
+
+void controller_unsubscribe(const Entity entity)
+{
+    remove(entity_states, entity);
 }
 
 
@@ -72,30 +94,30 @@ void controller_update()
 
 
     // Get speed modifier based on whether the left shift key is down.
-    float delta_time = get_delta_time();
-    Key_Actions shift_key_action = get_key_action(Keys::LEFT_SHIFT);
+    const float delta_time = get_delta_time();
+    const Key_Actions shift_key_action = get_key_action(Keys::LEFT_SHIFT);
 
-    float speed_modifier =
+    const float speed_modifier =
         (shift_key_action == Key_Actions::PRESS || shift_key_action == Key_Actions::REPEAT)
         ? 2.0f
         : 1.0f;
 
-    for (auto i = 0u; i < entity_transforms.size(); i++)
+    for_each(entity_states, [&](const Entity /*entity*/, Entity_State & entity_state) -> void
     {
         for_each(key_directions, [&](const Keys key, const vec3 & direction) -> void
         {
-            Key_Actions key_action = get_key_action(key);
+            const Key_Actions key_action = get_key_action(key);
 
             if (key_action == Key_Actions::PRESS || key_action == Key_Actions::REPEAT)
             {
-                entity_transforms[i]->position +=
+                entity_state.transform->position +=
                     normalize(direction) *
                     delta_time *
-                    *entity_speeds[i] *
+                    *entity_state.speed *
                     speed_modifier;
             }
         });
-    }
+    });
 }
 
 

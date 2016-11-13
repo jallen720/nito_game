@@ -2,7 +2,6 @@
 #include <vector>
 #include <map>
 #include "Nito/Engine.hpp"
-#include "Nito/Utilities.hpp"
 #include "Nito/APIs/ECS.hpp"
 #include "Cpp_Utils/Collection.hpp"
 #include "Cpp_Utils/JSON.hpp"
@@ -22,18 +21,15 @@ using std::map;
 // Nito/Engine.hpp
 using Nito::add_update_handler;
 using Nito::run_engine;
+using Nito::get_component_allocator;
+using Nito::get_component_deallocator;
 using Nito::Update_Handler;
+using Nito::Component_Handlers;
+using Nito::System_Entity_Handlers;
 
 // Nito/APIs/ECS.hpp
-using Nito::set_component_handler;
-using Nito::set_system_subscribe_handler;
-using Nito::Component;
-using Nito::Component_Handler;
-using Nito::System_Subscribe_Handler;
-
-// Nito/Utilities.hpp
-using Nito::string_component_handler;
-using Nito::float_component_handler;
+using Nito::set_component_handlers;
+using Nito::set_system_entity_handlers;
 
 // Cpp_Utils/Container.hpp
 using Cpp_Utils::for_each;
@@ -60,27 +56,69 @@ static vector<Update_Handler> update_handlers
 };
 
 
-static map<string, const System_Subscribe_Handler> system_subscribe_handlers
+static map<string, const System_Entity_Handlers> game_system_entity_handlers
 {
-    { "controller"        , controller_subscribe        },
-    { "bot_ai"            , bot_ai_subscribe            },
-    { "camera_controller" , camera_controller_subscribe },
-    { "demo_button"       , demo_button_subscribe       },
-    { "depth_handler"     , depth_handler_subscribe     },
-    { "parent_switcher"   , parent_switcher_subscribe   },
+    {
+        "controller",
+        {
+            controller_subscribe,
+            controller_unsubscribe,
+        },
+    },
+    {
+        "bot_ai",
+        {
+            bot_ai_subscribe,
+            bot_ai_unsubscribe,
+        },
+    },
+    {
+        "camera_controller",
+        {
+            camera_controller_subscribe,
+            camera_controller_unsubscribe,
+        },
+    },
+    {
+        "demo_button",
+        {
+            demo_button_subscribe,
+            demo_button_unsubscribe,
+        },
+    },
+    {
+        "depth_handler",
+        {
+            depth_handler_subscribe,
+            depth_handler_unsubscribe,
+        },
+    },
+    {
+        "parent_switcher",
+        {
+            parent_switcher_subscribe,
+            parent_switcher_unsubscribe,
+        },
+    },
 };
 
 
-static map<string, const Component_Handler> component_handlers
+static map<string, const Component_Handlers> game_component_handlers
 {
     {
         "target_id",
-        string_component_handler
+        {
+            get_component_allocator<string>(),
+            get_component_deallocator<string>(),
+        },
     },
     {
         "speed",
-        float_component_handler
-    }
+        {
+            get_component_allocator<float>(),
+            get_component_deallocator<float>(),
+        },
+    },
 };
 
 
@@ -93,8 +131,19 @@ int run()
 {
     parent_switcher_init();
     for_each(update_handlers, add_update_handler);
-    for_each(component_handlers, set_component_handler);
-    for_each(system_subscribe_handlers, set_system_subscribe_handler);
+
+    for_each(
+        game_system_entity_handlers,
+        [](const string & name, const System_Entity_Handlers & system_entity_handlers) -> void
+        {
+            set_system_entity_handlers(name, system_entity_handlers.subscriber, system_entity_handlers.unsubscriber);
+        });
+
+    for_each(game_component_handlers, [](const string & type, const Component_Handlers & component_handlers) -> void
+    {
+        set_component_handlers(type, component_handlers.allocator, component_handlers.deallocator);
+    });
+
     return run_engine();
 }
 

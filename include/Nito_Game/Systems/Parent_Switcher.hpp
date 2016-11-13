@@ -15,6 +15,7 @@ namespace Nito_Game
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void parent_switcher_init();
 void parent_switcher_subscribe(const Nito::Entity entity);
+void parent_switcher_unsubscribe(const Nito::Entity entity);
 
 
 } // namespace Nito_Game

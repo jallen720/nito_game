@@ -1,11 +1,13 @@
 #include "Nito_Game/Systems/Depth_Handler.hpp"
 
-#include <vector>
+#include <map>
 #include <glm/glm.hpp>
 #include "Nito/Components.hpp"
+#include "Cpp_Utils/Collection.hpp"
+#include "Cpp_Utils/Map.hpp"
 
 
-using std::vector;
+using std::map;
 
 // glm/glm.hpp
 using glm::vec3;
@@ -17,6 +19,12 @@ using Nito::get_component;
 // Nito/Components.hpp
 using Nito::Transform;
 
+// Cpp_Utils/Collection.hpp
+using Cpp_Utils::for_each;
+
+// Cpp_Utils/Map.hpp
+using Cpp_Utils::remove;
+
 
 namespace Nito_Game
 {
@@ -27,7 +35,7 @@ namespace Nito_Game
 // Data
 //
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-static vector<vec3 *> entity_positions;
+static map<Entity, vec3 *> entity_positions;
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -37,16 +45,23 @@ static vector<vec3 *> entity_positions;
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void depth_handler_subscribe(const Entity entity)
 {
-    entity_positions.push_back(&((Transform *)get_component(entity, "transform"))->position);
+    entity_positions[entity] = &((Transform *)get_component(entity, "transform"))->position;
+}
+
+
+void depth_handler_unsubscribe(const Entity entity)
+{
+
+    remove(entity_positions, entity);
 }
 
 
 void depth_handler_update()
 {
-    for (vec3 * entity_position : entity_positions)
+    for_each(entity_positions, [](const Entity /*entity*/, vec3 * position) -> void
     {
-        entity_position->z = entity_position->y;
-    }
+        position->z = position->y;
+    });
 }
 
 

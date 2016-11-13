@@ -14,6 +14,7 @@ namespace Nito_Game
 //
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void depth_handler_subscribe(const Nito::Entity entity);
+void depth_handler_unsubscribe(const Nito::Entity entity);
 void depth_handler_update();
 
 
