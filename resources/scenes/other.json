@@ -130,7 +130,7 @@
             },
             "sprite":
             {
-                "texture_path": "resources/textures/ui/button_default.png",
+                "texture_path": "resources/textures/ui/button.png",
                 "shader_pipeline_name": "texture"
             },
             "transform": {},

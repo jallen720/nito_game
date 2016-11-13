@@ -44,7 +44,7 @@
         }
     },
     {
-        "path": "resources/textures/ui/button_default.png",
+        "path": "resources/textures/ui/button.png",
         "format": "rgba",
         "options":
         {
