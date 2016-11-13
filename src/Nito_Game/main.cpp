@@ -6,12 +6,12 @@
 #include "Cpp_Utils/Collection.hpp"
 #include "Cpp_Utils/JSON.hpp"
 
-#include "Nito_Game/Systems/Controller.hpp"
 #include "Nito_Game/Systems/Bot_AI.hpp"
 #include "Nito_Game/Systems/Camera_Controller.hpp"
-#include "Nito_Game/Systems/Demo_Button.hpp"
+#include "Nito_Game/Systems/Controller.hpp"
 #include "Nito_Game/Systems/Depth_Handler.hpp"
 #include "Nito_Game/Systems/Parent_Switcher.hpp"
+#include "Nito_Game/Systems/Scene_Load_Button.hpp"
 
 
 using std::string;
@@ -80,10 +80,10 @@ static map<string, const System_Entity_Handlers> game_system_entity_handlers
         },
     },
     {
-        "demo_button",
+        "scene_load_button",
         {
-            demo_button_subscribe,
-            demo_button_unsubscribe,
+            scene_load_button_subscribe,
+            scene_load_button_unsubscribe,
         },
     },
     {

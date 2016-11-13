@@ -147,7 +147,7 @@
             "ui_transform",
             "ui_mouse_event_dispatcher",
             "button",
-            "demo_button"
+            "scene_load_button"
         ]
     },
     {

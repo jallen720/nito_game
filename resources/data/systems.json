@@ -73,7 +73,7 @@
             "ui_mouse_event_dispatcher"
         ]
     },
-    "demo_button":
+    "scene_load_button":
     {
         "required_components":
         [

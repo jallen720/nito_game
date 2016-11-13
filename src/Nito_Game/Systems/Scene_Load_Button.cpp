@@ -1,4 +1,4 @@
-#include "Nito_Game/Systems/Demo_Button.hpp"
+#include "Nito_Game/Systems/Scene_Load_Button.hpp"
 
 #include <map>
 #include <string>
@@ -41,7 +41,7 @@ static map<Entity, Button *> entity_buttons;
 // Interface
 //
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-void demo_button_subscribe(const Entity entity)
+void scene_load_button_subscribe(const Entity entity)
 {
     auto button = (Button *)get_component(entity, "button");
     const auto scene_to_load = (string *)get_component(entity, "scene_to_load");
@@ -54,7 +54,7 @@ void demo_button_subscribe(const Entity entity)
 }
 
 
-void demo_button_unsubscribe(const Entity entity)
+void scene_load_button_unsubscribe(const Entity entity)
 {
     static const auto dud = []() -> void {};
 
