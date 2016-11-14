@@ -21,7 +21,6 @@
         },
         "systems":
         [
-            "renderer",
             "controller",
             "depth_handler"
         ]
@@ -45,7 +44,6 @@
         },
         "systems":
         [
-            "renderer",
             "bot_ai",
             "depth_handler"
         ]
@@ -68,7 +66,6 @@
         },
         "systems":
         [
-            "renderer",
             "bot_ai",
             "depth_handler"
         ]
@@ -90,7 +87,6 @@
         },
         "systems":
         [
-            "renderer",
             "depth_handler"
         ]
     },
@@ -143,10 +139,6 @@
         },
         "systems":
         [
-            "renderer",
-            "ui_transform",
-            "ui_mouse_event_dispatcher",
-            "button",
             "scene_load_button"
         ]
     },
@@ -179,10 +171,6 @@
         },
         "systems":
         [
-            "renderer",
-            "ui_transform",
-            "ui_mouse_event_dispatcher",
-            "button",
             "scene_load_button"
         ]
     },
@@ -215,10 +203,6 @@
         },
         "systems":
         [
-            "renderer",
-            "ui_transform",
-            "ui_mouse_event_dispatcher",
-            "button",
             "scene_load_button"
         ]
     },
@@ -251,10 +235,6 @@
         },
         "systems":
         [
-            "renderer",
-            "ui_transform",
-            "ui_mouse_event_dispatcher",
-            "button",
             "scene_load_button"
         ]
     },
@@ -269,10 +249,7 @@
             },
             "transform": {}
         },
-        "systems":
-        [
-            "renderer"
-        ]
+        "systems": []
     },
     {
         "components":
@@ -289,10 +266,7 @@
                 "position": { "x": 3, "y": 3 }
             }
         },
-        "systems":
-        [
-            "text_renderer"
-        ]
+        "systems": []
     },
     {
         "components":
@@ -309,10 +283,7 @@
                 "position": { "x": 12, "y": 2 }
             }
         },
-        "systems":
-        [
-            "text_renderer"
-        ]
+        "systems": []
     },
     {
         "components":
@@ -338,8 +309,6 @@
         },
         "systems":
         [
-            "renderer",
-            "local_transform",
             "parent_switcher"
         ]
     },
@@ -361,10 +330,6 @@
                 "scale": { "x": 0.5, "y": 0.5 }
             }
         },
-        "systems":
-        [
-            "text_renderer",
-            "local_transform"
-        ]
+        "systems": []
     }
 ]

@@ -28,10 +28,6 @@
         },
         "systems":
         [
-            "renderer",
-            "ui_transform",
-            "ui_mouse_event_dispatcher",
-            "button",
             "scene_load_button"
         ]
     },
@@ -50,7 +46,6 @@
         },
         "systems":
         [
-            "text_renderer",
             "local_transform"
         ]
     },
