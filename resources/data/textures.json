@@ -77,6 +77,39 @@
         }
     },
     {
+        "path": "resources/textures/ui/square_button.png",
+        "format": "rgba",
+        "options":
+        {
+            "wrap_s": "repeat",
+            "wrap_t": "repeat",
+            "min_filter": "linear",
+            "mag_filter": "linear"
+        }
+    },
+    {
+        "path": "resources/textures/ui/square_button_hover.png",
+        "format": "rgba",
+        "options":
+        {
+            "wrap_s": "repeat",
+            "wrap_t": "repeat",
+            "min_filter": "linear",
+            "mag_filter": "linear"
+        }
+    },
+    {
+        "path": "resources/textures/ui/square_button_pressed.png",
+        "format": "rgba",
+        "options":
+        {
+            "wrap_s": "repeat",
+            "wrap_t": "repeat",
+            "min_filter": "linear",
+            "mag_filter": "linear"
+        }
+    },
+    {
         "path": "resources/textures/background.png",
         "format": "rgb",
         "options":
