@@ -1,4 +1,5 @@
 {
-    "default": "resources/scenes/main.json",
+    "default": "resources/scenes/menus/main.json",
+    "main": "resources/scenes/main.json",
     "other": "resources/scenes/other.json"
 }
