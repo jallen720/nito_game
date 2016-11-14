@@ -5,8 +5,7 @@
     },
     {
         "name": "world",
-        "space": "world",
-        "sorting": "highest_z"
+        "space": "world"
     },
     {
         "name": "background",
