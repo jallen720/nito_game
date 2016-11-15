@@ -9,6 +9,7 @@
     [
         "render_layer",
         "sprite",
+        "dimensions",
         "transform"
     ],
     "controller":
@@ -30,13 +31,12 @@
     "ui_transform":
     [
         "transform",
-        "ui_transform",
-        "sprite"
+        "ui_transform"
     ],
     "ui_mouse_event_dispatcher":
     [
         "transform",
-        "sprite",
+        "dimensions",
         "ui_mouse_event_handlers"
     ],
     "button":
@@ -69,5 +69,10 @@
     "depth_handler":
     [
         "transform"
+    ],
+    "sprite_dimensions_handler":
+    [
+        "sprite",
+        "dimensions"
     ]
 }

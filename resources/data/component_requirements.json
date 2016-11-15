@@ -17,7 +17,8 @@
     ],
     "sprite":
     [
-        "renderer"
+        "renderer",
+        "sprite_dimensions_handler"
     ],
     "text":
     [

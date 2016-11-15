@@ -7,15 +7,15 @@
             "sprite":
             {
                 "texture_path": "resources/textures/character.png",
-                "shader_pipeline_name": "texture",
-                "dimensions":
-                {
-                    "origin": { "x": 0.5, "y": 0 }
-                }
+                "shader_pipeline_name": "texture"
             },
             "transform":
             {
                 "position": { "x": 0.5, "y": 0.5 }
+            },
+            "dimensions":
+            {
+                "origin": { "x": 0.5, "y": 0 }
             },
             "speed": 1
         },
@@ -39,6 +39,7 @@
             {
                 "position": { "x": 1.5, "y": 0.5 }
             },
+            "dimensions": {},
             "target_id": "Player",
             "speed": 0.5
         },
@@ -61,6 +62,7 @@
             {
                 "position": { "x": 2.5, "y": 1.5 }
             },
+            "dimensions": {},
             "target_id": "Bot_0",
             "speed": 0.25
         },
@@ -83,7 +85,8 @@
             {
                 "position": { "x": 5, "y": 5 },
                 "scale": { "x": 0.5, "y": 0.5 }
-            }
+            },
+            "dimensions": {}
         },
         "systems":
         [
@@ -130,6 +133,7 @@
                 "shader_pipeline_name": "texture"
             },
             "transform": {},
+            "dimensions": {},
             "ui_transform":
             {
                 "position": { "x": 0.2, "y": 0.2 }
@@ -151,7 +155,8 @@
                 "texture_path": "resources/textures/background.png",
                 "shader_pipeline_name": "texture"
             },
-            "transform": {}
+            "transform": {},
+            "dimensions": {}
         },
         "systems": []
     },
@@ -160,17 +165,17 @@
         {
             "render_layer": "world",
             "id": "Box",
+            "parent_id": "Player",
             "sprite":
             {
                 "texture_path": "resources/textures/box.jpg",
-                "shader_pipeline_name": "texture",
-                "dimensions":
-                {
-                    "origin": { "x": 0.5, "y": 0 }
-                }
+                "shader_pipeline_name": "texture"
             },
-            "parent_id": "Player",
             "transform": {},
+            "dimensions":
+            {
+                "origin": { "x": 0.5, "y": 0 }
+            },
             "local_transform":
             {
                 "position": { "x": 0, "y": 1.3 },
