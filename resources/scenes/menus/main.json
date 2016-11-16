@@ -42,6 +42,10 @@
                 "value": "Play"
             },
             "transform": {},
+            "dimensions":
+            {
+                "origin": { "x": 0.5, "y": 0.45 }
+            },
             "local_transform": {}
         },
         "systems":

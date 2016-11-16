@@ -54,7 +54,8 @@
     [
         "render_layer",
         "text",
-        "transform"
+        "transform",
+        "dimensions"
     ],
     "local_transform":
     [
