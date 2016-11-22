@@ -48,10 +48,7 @@
             },
             "local_transform": {}
         },
-        "systems":
-        [
-            "local_transform"
-        ]
+        "systems": []
     },
     {
         "components":
