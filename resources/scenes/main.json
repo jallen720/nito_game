@@ -342,5 +342,26 @@
             }
         },
         "systems": []
+    },
+    {
+        "components":
+        {
+            "render_layer": "world",
+            "sprite":
+            {
+                "texture_path": "resources/textures/polys.jpg",
+                "shader_pipeline_name": "texture"
+            },
+            "dimensions": {},
+            "transform": {},
+            "local_transform":
+            {
+                "position": { "x": 4, "y": 4 },
+                "scale": { "x": 0.5, "y": 0.5 },
+                "rotation": -45
+            },
+            "parent_id": "Box"
+        },
+        "systems": []
     }
 ]
