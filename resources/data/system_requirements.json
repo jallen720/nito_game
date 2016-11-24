@@ -1,22 +1,4 @@
 {
-    "camera":
-    [
-        "dimensions",
-        "viewport",
-        "transform"
-    ],
-    "renderer":
-    [
-        "render_layer",
-        "sprite",
-        "dimensions",
-        "transform"
-    ],
-    "controller":
-    [
-        "transform",
-        "speed"
-    ],
     "bot_ai":
     [
         "transform",
@@ -28,52 +10,22 @@
         "transform",
         "target_id"
     ],
-    "ui_transform":
+    "controller":
     [
         "transform",
-        "ui_transform"
-    ],
-    "ui_mouse_event_dispatcher":
-    [
-        "transform",
-        "dimensions",
-        "ui_mouse_event_handlers"
-    ],
-    "button":
-    [
-        "button",
-        "sprite",
-        "ui_mouse_event_handlers"
-    ],
-    "scene_load_button":
-    [
-        "button",
-        "scene_to_load"
-    ],
-    "text_renderer":
-    [
-        "render_layer",
-        "text",
-        "transform",
-        "dimensions"
-    ],
-    "local_transform":
-    [
-        "parent_id",
-        "transform",
-        "local_transform"
-    ],
-    "parent_switcher":
-    [
-        "parent_id"
+        "speed"
     ],
     "depth_handler":
     [
         "transform"
     ],
-    "sprite_dimensions_handler":
+    "parent_switcher":
     [
-        "sprite",
-        "dimensions"
+        "parent_id"
+    ],
+    "scene_load_button":
+    [
+        "button",
+        "scene_to_load"
     ]
 }

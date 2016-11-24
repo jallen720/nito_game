@@ -3,6 +3,8 @@
 #include <map>
 #include "Nito/Engine.hpp"
 #include "Nito/APIs/ECS.hpp"
+#include "Nito/APIs/Input.hpp"
+#include "Nito/APIs/Window.hpp"
 #include "Cpp_Utils/Collection.hpp"
 #include "Cpp_Utils/JSON.hpp"
 
@@ -20,6 +22,7 @@ using std::map;
 
 // Nito/Engine.hpp
 using Nito::add_update_handler;
+using Nito::set_control_handler;
 using Nito::run_engine;
 using Nito::get_component_allocator;
 using Nito::get_component_deallocator;
@@ -30,6 +33,12 @@ using Nito::System_Entity_Handlers;
 // Nito/APIs/ECS.hpp
 using Nito::set_component_handlers;
 using Nito::set_system_entity_handlers;
+
+// Nito/APIs/Input.hpp
+using Nito::Control_Handler;
+
+// Nito/APIs/Window.hpp
+using Nito::close_window;
 
 // Cpp_Utils/Container.hpp
 using Cpp_Utils::for_each;
@@ -47,12 +56,21 @@ namespace Nito_Game
 // Data
 //
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-static vector<Update_Handler> update_handlers
+static vector<Update_Handler> game_update_handlers
 {
     depth_handler_update,
     controller_update,
     bot_ai_update,
     camera_controller_update,
+};
+
+
+static map<string, const Control_Handler> game_control_handlers
+{
+    {
+        "exit",
+        close_window
+    }
 };
 
 
@@ -137,7 +155,8 @@ static map<string, const Component_Handlers> game_component_handlers
 int run()
 {
     parent_switcher_init();
-    for_each(update_handlers, add_update_handler);
+    for_each(game_update_handlers, add_update_handler);
+    for_each(game_control_handlers, set_control_handler);
 
     for_each(
         game_system_entity_handlers,
