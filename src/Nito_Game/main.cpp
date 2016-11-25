@@ -70,7 +70,7 @@ static map<string, const Control_Handler> game_control_handlers
     {
         "exit",
         close_window
-    }
+    },
 };
 
 
