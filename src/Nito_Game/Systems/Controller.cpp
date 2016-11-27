@@ -115,6 +115,18 @@ void controller_update()
                     delta_time *
                     *entity_state.speed *
                     speed_modifier;
+
+                entity_state.transform->rotation -=
+                    direction.x *
+                    delta_time *
+                    *entity_state.speed *
+                    speed_modifier * 57.2958f;
+
+                entity_state.transform->scale +=
+                    direction.y *
+                    delta_time *
+                    *entity_state.speed *
+                    speed_modifier;
             }
         });
     });
