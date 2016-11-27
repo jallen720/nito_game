@@ -27,8 +27,8 @@ using Nito::get_delta_time;
 
 // Nito/APIs/Input.hpp
 using Nito::Keys;
-using Nito::Key_Actions;
-using Nito::get_key_action;
+using Nito::Button_Actions;
+using Nito::get_key_button_action;
 
 // Cpp_Utils/Collection.hpp
 using Cpp_Utils::for_each;
@@ -95,10 +95,10 @@ void controller_update()
 
     // Get speed modifier based on whether the left shift key is down.
     const float delta_time = get_delta_time();
-    const Key_Actions shift_key_action = get_key_action(Keys::LEFT_SHIFT);
+    const Button_Actions shift_button_action = get_key_button_action(Keys::LEFT_SHIFT);
 
     const float speed_modifier =
-        (shift_key_action == Key_Actions::PRESS || shift_key_action == Key_Actions::REPEAT)
+        (shift_button_action == Button_Actions::PRESS || shift_button_action == Button_Actions::REPEAT)
         ? 2.0f
         : 1.0f;
 
@@ -106,9 +106,9 @@ void controller_update()
     {
         for_each(key_directions, [&](const Keys key, const vec3 & direction) -> void
         {
-            const Key_Actions key_action = get_key_action(key);
+            const Button_Actions button_action = get_key_button_action(key);
 
-            if (key_action == Key_Actions::PRESS || key_action == Key_Actions::REPEAT)
+            if (button_action == Button_Actions::PRESS || button_action == Button_Actions::REPEAT)
             {
                 entity_state.transform->position +=
                     normalize(direction) *

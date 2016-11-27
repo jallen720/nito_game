@@ -16,7 +16,7 @@ using Nito::get_component;
 
 // Nito/APIs/Input.hpp
 using Nito::Keys;
-using Nito::Key_Actions;
+using Nito::Button_Actions;
 using Nito::set_control_handler;
 using Nito::add_control_binding;
 
@@ -56,7 +56,7 @@ void parent_switcher_init()
         });
     });
 
-    add_control_binding(Keys::F, Key_Actions::PRESS, CONTROL_HANDLER_NAME);
+    add_control_binding(Keys::F, Button_Actions::PRESS, CONTROL_HANDLER_NAME);
 }
 
 
