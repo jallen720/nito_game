@@ -17,8 +17,7 @@ using Nito::get_component;
 // Nito/APIs/Input.hpp
 using Nito::Keys;
 using Nito::Button_Actions;
-using Nito::set_control_handler;
-using Nito::add_control_binding;
+using Nito::set_key_handler;
 
 // Cpp_Utils/Collection.hpp
 using Cpp_Utils::for_each;
@@ -46,17 +45,19 @@ static map<Entity, string *> entity_parent_ids;
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void parent_switcher_init()
 {
-    static const string CONTROL_HANDLER_NAME = "parent_switcher_control_handler";
-
-    set_control_handler(CONTROL_HANDLER_NAME, [&]() -> void
-    {
-        for_each(entity_parent_ids, [](const Entity /*entity*/, string * parent_id) -> void
+    set_key_handler(
+        "parent_switcher_control_handler",
         {
-            *parent_id = *parent_id == "Player" ? "Bot_0" : "Player";
+            Keys::F,
+            Button_Actions::PRESS,
+            [&]() -> void
+            {
+                for_each(entity_parent_ids, [](const Entity /*entity*/, string * parent_id) -> void
+                {
+                    *parent_id = *parent_id == "Player" ? "Bot_0" : "Player";
+                });
+            },
         });
-    });
-
-    add_control_binding(Keys::F, Button_Actions::PRESS, CONTROL_HANDLER_NAME);
 }
 
 

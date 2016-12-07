@@ -22,7 +22,6 @@ using std::map;
 
 // Nito/Engine.hpp
 using Nito::add_update_handler;
-using Nito::set_control_handler;
 using Nito::run_engine;
 using Nito::get_component_allocator;
 using Nito::get_component_deallocator;
@@ -35,7 +34,9 @@ using Nito::set_component_handlers;
 using Nito::set_system_entity_handlers;
 
 // Nito/APIs/Input.hpp
-using Nito::Control_Handler;
+using Nito::Keys;
+using Nito::Button_Actions;
+using Nito::set_key_handler;
 
 // Nito/APIs/Window.hpp
 using Nito::close_window;
@@ -62,15 +63,6 @@ static vector<Update_Handler> game_update_handlers
     controller_update,
     bot_ai_update,
     camera_controller_update,
-};
-
-
-static map<string, const Control_Handler> game_control_handlers
-{
-    {
-        "exit",
-        close_window
-    },
 };
 
 
@@ -156,7 +148,6 @@ int run()
 {
     parent_switcher_init();
     for_each(game_update_handlers, add_update_handler);
-    for_each(game_control_handlers, set_control_handler);
 
     for_each(
         game_system_entity_handlers,
@@ -169,6 +160,14 @@ int run()
     {
         set_component_handlers(type, component_handlers.allocator, component_handlers.deallocator);
     });
+
+    set_key_handler(
+        "exit",
+        {
+            Keys::ESCAPE,
+            Button_Actions::PRESS,
+            close_window,
+        });
 
     return run_engine();
 }
