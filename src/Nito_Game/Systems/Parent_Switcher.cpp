@@ -47,16 +47,14 @@ void parent_switcher_init()
 {
     set_key_handler(
         "parent_switcher_control_handler",
+        Keys::F,
+        Button_Actions::PRESS,
+        [&]() -> void
         {
-            Keys::F,
-            Button_Actions::PRESS,
-            [&]() -> void
+            for_each(entity_parent_ids, [](const Entity /*entity*/, string * parent_id) -> void
             {
-                for_each(entity_parent_ids, [](const Entity /*entity*/, string * parent_id) -> void
-                {
-                    *parent_id = *parent_id == "Player" ? "Bot_0" : "Player";
-                });
-            },
+                *parent_id = *parent_id == "Player" ? "Bot_0" : "Player";
+            });
         });
 }
 
