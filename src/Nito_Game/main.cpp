@@ -68,48 +68,12 @@ static vector<Update_Handler> game_update_handlers
 
 static map<string, const System_Entity_Handlers> game_system_entity_handlers
 {
-    {
-        "controller",
-        {
-            controller_subscribe,
-            controller_unsubscribe,
-        },
-    },
-    {
-        "bot_ai",
-        {
-            bot_ai_subscribe,
-            bot_ai_unsubscribe,
-        },
-    },
-    {
-        "camera_controller",
-        {
-            camera_controller_subscribe,
-            camera_controller_unsubscribe,
-        },
-    },
-    {
-        "scene_load_button",
-        {
-            scene_load_button_subscribe,
-            scene_load_button_unsubscribe,
-        },
-    },
-    {
-        "depth_handler",
-        {
-            depth_handler_subscribe,
-            depth_handler_unsubscribe,
-        },
-    },
-    {
-        "parent_switcher",
-        {
-            parent_switcher_subscribe,
-            parent_switcher_unsubscribe,
-        },
-    },
+    NITO_SYSTEM_ENTITY_HANDLERS(controller),
+    NITO_SYSTEM_ENTITY_HANDLERS(bot_ai),
+    NITO_SYSTEM_ENTITY_HANDLERS(camera_controller),
+    NITO_SYSTEM_ENTITY_HANDLERS(scene_load_button),
+    NITO_SYSTEM_ENTITY_HANDLERS(depth_handler),
+    NITO_SYSTEM_ENTITY_HANDLERS(parent_switcher),
 };
 
 
