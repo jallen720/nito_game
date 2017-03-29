@@ -1,6 +1,28 @@
 [
     {
-        "path": "resources/textures/character.png",
+        "format": "rgba",
+        "options":
+        {
+            "wrap_s": "repeat",
+            "wrap_t": "repeat",
+            "min_filter": "linear",
+            "mag_filter": "linear"
+        },
+        "paths":
+        [
+            "resources/textures/box.jpg",
+            "resources/textures/polys.jpg",
+            "resources/textures/ui/button.png",
+            "resources/textures/ui/button_hover.png",
+            "resources/textures/ui/button_pressed.png",
+            "resources/textures/ui/square_button.png",
+            "resources/textures/ui/square_button_hover.png",
+            "resources/textures/ui/square_button_pressed.png",
+            "resources/textures/background.png",
+            "resources/textures/box.jpg"
+        ]
+    },
+    {
         "format": "rgba",
         "options":
         {
@@ -8,127 +30,11 @@
             "wrap_t": "repeat",
             "min_filter": "nearest",
             "mag_filter": "nearest"
-        }
-    },
-    {
-        "path": "resources/textures/test.png",
-        "format": "rgba",
-        "options":
-        {
-            "wrap_s": "repeat",
-            "wrap_t": "repeat",
-            "min_filter": "nearest",
-            "mag_filter": "nearest"
-        }
-    },
-    {
-        "path": "resources/textures/box.jpg",
-        "format": "rgb",
-        "options":
-        {
-            "wrap_s": "repeat",
-            "wrap_t": "repeat",
-            "min_filter": "linear",
-            "mag_filter": "linear"
-        }
-    },
-    {
-        "path": "resources/textures/polys.jpg",
-        "format": "rgb",
-        "options":
-        {
-            "wrap_s": "repeat",
-            "wrap_t": "repeat",
-            "min_filter": "linear",
-            "mag_filter": "linear"
-        }
-    },
-    {
-        "path": "resources/textures/ui/button.png",
-        "format": "rgba",
-        "options":
-        {
-            "wrap_s": "repeat",
-            "wrap_t": "repeat",
-            "min_filter": "linear",
-            "mag_filter": "linear"
-        }
-    },
-    {
-        "path": "resources/textures/ui/button_hover.png",
-        "format": "rgba",
-        "options":
-        {
-            "wrap_s": "repeat",
-            "wrap_t": "repeat",
-            "min_filter": "linear",
-            "mag_filter": "linear"
-        }
-    },
-    {
-        "path": "resources/textures/ui/button_pressed.png",
-        "format": "rgba",
-        "options":
-        {
-            "wrap_s": "repeat",
-            "wrap_t": "repeat",
-            "min_filter": "linear",
-            "mag_filter": "linear"
-        }
-    },
-    {
-        "path": "resources/textures/ui/square_button.png",
-        "format": "rgba",
-        "options":
-        {
-            "wrap_s": "repeat",
-            "wrap_t": "repeat",
-            "min_filter": "linear",
-            "mag_filter": "linear"
-        }
-    },
-    {
-        "path": "resources/textures/ui/square_button_hover.png",
-        "format": "rgba",
-        "options":
-        {
-            "wrap_s": "repeat",
-            "wrap_t": "repeat",
-            "min_filter": "linear",
-            "mag_filter": "linear"
-        }
-    },
-    {
-        "path": "resources/textures/ui/square_button_pressed.png",
-        "format": "rgba",
-        "options":
-        {
-            "wrap_s": "repeat",
-            "wrap_t": "repeat",
-            "min_filter": "linear",
-            "mag_filter": "linear"
-        }
-    },
-    {
-        "path": "resources/textures/background.png",
-        "format": "rgb",
-        "options":
-        {
-            "wrap_s": "repeat",
-            "wrap_t": "repeat",
-            "min_filter": "linear",
-            "mag_filter": "linear"
-        }
-    },
-    {
-        "path": "resources/textures/box.jpg",
-        "format": "rgb",
-        "options":
-        {
-            "wrap_s": "repeat",
-            "wrap_t": "repeat",
-            "min_filter": "linear",
-            "mag_filter": "linear"
-        }
+        },
+        "paths":
+        [
+            "resources/textures/character.png",
+            "resources/textures/test.png"
+        ]
     }
 ]
