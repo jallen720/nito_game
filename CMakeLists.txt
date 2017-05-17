@@ -19,6 +19,6 @@ module_dependency("GLFW3")
 module_dependency("Nito")
 add_bin()
 
-# Tests
-test_module_dependency("GoogleTest")
-add_bin_tests()
+# # Tests
+# test_module_dependency("GoogleTest")
+# add_bin_tests()
